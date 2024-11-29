@@ -15,7 +15,9 @@ module.exports = {
         instrument : ['Instrument Serif', 'serif']
       },
       fontSize: {
-        massive : ['23rem']
+        10 : '10rem',
+        11 : '12rem',
+        massive : '23rem'
       },
       lineHeight: {
         11 : '3rem',
