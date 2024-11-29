@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 export default function MenuButton() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,10 +27,31 @@ export default function MenuButton() {
                     isMenuOpen ? "translate-y-0" : "-translate-y-full"
                 }`}
             >
-                <div className="flex flex-col font-instrument text-blue-600 text-11 leading-19 space-y-4">
-                    <button className="hover:text-red-600 transition delay-150">Projects</button>
-                    <button className="hover:text-red-600 transition delay-150">Resume</button>
-                    <button className="hover:text-red-600 transition delay-150">About me</button>
+                <div className="flex flex-col font-instrument text-blue-600 text-11 leading-19">
+                    <Link href="/projects">
+                        <button
+                            className="hover:text-red-600 transition delay-100"
+                            onClick={toggleMenu}
+                        >
+                            Projects
+                        </button>
+                    </Link>
+                    <Link href="/resume">
+                        <button
+                            className="hover:text-red-600 transition delay-100"
+                            onClick={toggleMenu}
+                        >
+                            Resume
+                        </button>
+                    </Link>
+                    <Link href="/about">
+                        <button
+                            className="hover:text-red-600 transition delay-100"
+                            onClick={toggleMenu}
+                        >
+                            About me
+                        </button>
+                    </Link>
                 </div>
                 <button
                     className="font-instrument absolute top-10 right-14 text-4xl hover:text-red-600 transition delay-100"
