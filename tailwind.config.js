@@ -40,7 +40,10 @@ module.exports = {
         28 : '20rem',
         29 : '21rem',
         30 : '22rem',
-      }
+      },
+      colors: {
+        'hot-pink': '#FF2E5F',
+      },
     },
   },
   plugins: [],
