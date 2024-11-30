@@ -1,6 +1,7 @@
 "use client";
 
 import Header from "./components/Header";
+import Project from "./components/ProjectPage";
 
 export default function Home() {
   return (
@@ -28,12 +29,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Project 1 */}
-        <div className="h-[575px] bg-slate-800 mx-[150px] my-[100px] grid content-center justify-center snap-start">
-          <h1 className="font-instrument text-[200px] tracking-tighter text-white">
-            Project 1
-          </h1>
-        </div>
+        {/* Project Components */}
+        <Project title="Project 1" snapAlign="snap-center" />
+        <Project title="Project 2" snapAlign="snap-center" />
       </div>
     </>
   );
