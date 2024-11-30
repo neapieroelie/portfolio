@@ -17,7 +17,8 @@ module.exports = {
       fontSize: {
         10 : '10rem',
         11 : '12rem',
-        massive : '23rem'
+        massive : '23rem',
+        humongous : '25rem'
       },
       lineHeight: {
         11 : '3rem',
