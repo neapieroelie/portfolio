@@ -1,17 +1,10 @@
 "use client";
 
 import Header from "./components/Header";
-import Head from "next/head";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Nea Kirana</title>
-        <meta name="description" content="Nea Pieroelie's Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory">
         {/* Header */}
         <div className="fixed top-0 right-0 z-10 w-full">

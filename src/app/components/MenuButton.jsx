@@ -44,7 +44,7 @@ export default function MenuButton() {
                             Resume
                         </button>
                     </Link>
-                    <Link href="/about">
+                    <Link href="/about-me">
                         <button
                             className="hover:text-red-600 transition delay-100"
                             onClick={toggleMenu}
