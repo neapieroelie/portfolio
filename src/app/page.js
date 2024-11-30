@@ -12,21 +12,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-
+      <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory">
         {/* Header */}
-        <div className="fixed top-0 right-0 z-10">
+        <div className="fixed top-0 right-0 z-10 w-full">
           <Header />
         </div>
 
         {/* Main Content */}
         <div
-          className=" w-full min-h-screen bg-cover bg-center z-0"
+          className="w-full min-h-screen bg-cover bg-center z-0 snap-start"
           style={{
             backgroundImage: "url('/background.jpg')",
           }}
         >
-          <div className=" w-full h-screen flex flex-col justify-center items-center">
+          <div className="w-full h-screen flex flex-col justify-center items-center">
             <h1 className="font-instrument text-humongous tracking-tighter leading-26 text-white">
               Nea Kirana
             </h1>
@@ -37,8 +36,10 @@ export default function Home() {
         </div>
 
         {/* Project 1 */}
-        <div className=" h-[575px] bg-slate-800 mx-[150px] my-[100px]  grid content-center justify-center ">
-            <h1 className=" font-instrument text-[200px] tracking-tighter ">Project 1</h1>
+        <div className="h-[575px] bg-slate-800 mx-[150px] my-[100px] grid content-center justify-center snap-start">
+          <h1 className="font-instrument text-[200px] tracking-tighter text-white">
+            Project 1
+          </h1>
         </div>
       </div>
     </>
