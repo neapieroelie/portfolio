@@ -13,7 +13,7 @@ export default function MenuButton() {
             {/* Menu button */}
             <div className="flex">
                 <button
-                    className="font-instrument text-4xl tracking-tighter text-white hover:text-yellow-300 transition delay-100"
+                    className="font-robotoCondensed text-4xl tracking-tighter text-white hover:text-yellow-300 transition delay-100"
                     onClick={toggleMenu}
                 >
                     menu
@@ -27,7 +27,7 @@ export default function MenuButton() {
                     isMenuOpen ? "translate-y-0" : "-translate-y-full"
                 }`}
             >
-                <div className="text-center flex flex-col font-instrument text-blue-600 text-11 leading-19">
+                <div className="text-center flex flex-col font-instrument tracking-tighter text-blue-600 text-11 leading-19">
                     <Link href="./pages/projects">
                         <button
                             className="hover:text-red-600 transition delay-100 hover:scale-110 "

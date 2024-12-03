@@ -2,9 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="flex flex-row items-center justify-between w-full h-dvh px-10 py-7 bg-slate-900 text-white snap-center">
-      
-      {/* Footer Logo */}
+    <div className="flex flex-row items-center justify-between w-full h-dvh px-24 bg-gray-950 text-white snap-center ">
+      {/* Logo */}
       <div className=" flex flex-col justify-start items-left ">
         <div className=" flex flex-row justify-center items-center gap-5">
             <Link href="#">
@@ -26,25 +25,36 @@ export default function Footer() {
         >
           nea.pieroelie@gmail.com
         </a>
-      </div>
-      
+      </div >
 
-      {/* Footer Links */}
-      <div>
-        <h1>Navigation</h1>
-        <div className="flex flex-col gap-8">
-            <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
-                Projects
-            </Link>
-            <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
-                Resume
-            </Link>
-            <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
-                About me
-            </Link>
+      {/* Content */}
+      <div className=" flex flex-row items-left gap-24">
+        {/* Navigation */}
+        <div className=" flex flex-col items-left gap-4">
+          <h1 className="font-instrument text-7xl tracking-tighter">Navigation</h1>
+          <div className="font-robotoCondensed text-4xl flex flex-col items-left gap-3">
+              <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
+                  PROJECTS
+              </Link>
+              <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
+                  RESUME
+              </Link>
+              <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
+                  ABOUT ME
+              </Link>
+          </div>
+        </div>
+
+        {/* Connect */}
+        <div className=" flex flex-col items-left gap-4">
+          <h1 className="font-instrument text-7xl tracking-tighter">Connect</h1>
+          <div className="font-robotoCondensed text-4xl flex flex-col items-left gap-3">
+              <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
+                LINKEDIN
+              </Link>
+          </div>
         </div>
       </div>
-      
     </div>
   );
 }

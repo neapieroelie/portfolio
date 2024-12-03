@@ -12,7 +12,9 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        instrument : ['Instrument Serif', 'serif']
+        instrument : ['Instrument Serif', 'serif'],
+        dmSans: ['DM Sans', 'sans-serif'],
+        robotoCondensed: ['Roboto Condensed', 'sans-serif'],
       },
       fontSize: {
         10 : '10rem',
