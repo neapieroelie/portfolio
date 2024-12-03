@@ -22,31 +22,31 @@ export default function MenuButton() {
 
             {/* Popup Menu */}
             <div
-                className={`fixed top-0 left-0 w-full h-screen bg-yellow-300 flex flex-col items-center justify-center 
+                className={`fixed top-0 left-0 w-full h-screen bg-yellow-300 flex flex-col items-center justify-center
                 transform transition-transform duration-500 ${
                     isMenuOpen ? "translate-y-0" : "-translate-y-full"
                 }`}
             >
-                <div className="flex flex-col font-instrument text-blue-600 text-11 leading-19">
-                    <Link href="/projects">
+                <div className="text-center flex flex-col font-instrument text-blue-600 text-11 leading-19">
+                    <Link href="./pages/projects">
                         <button
-                            className="hover:text-red-600 transition delay-100"
+                            className="hover:text-red-600 transition delay-100 hover:scale-110 "
                             onClick={toggleMenu}
                         >
                             Projects
                         </button>
                     </Link>
-                    <Link href="/resume">
+                    <Link href="./pages/resume">
                         <button
-                            className="hover:text-red-600 transition delay-100"
+                            className="hover:text-red-600 transition delay-100 hover:scale-110"
                             onClick={toggleMenu}
                         >
                             Resume
                         </button>
                     </Link>
-                    <Link href="/about-me">
+                    <Link href="./pages/about-me">
                         <button
-                            className="hover:text-red-600 transition delay-100"
+                            className="hover:text-red-600 transition delay-100 hover:scale-110"
                             onClick={toggleMenu}
                         >
                             About me

@@ -1,16 +1,42 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Project from "./components/ProjectPage";
 
 export default function Home() {
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsFooterVisible(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
       <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory">
         {/* Header */}
-        <div className="fixed top-0 right-0 z-10 w-full">
-          <Header />
-        </div>
+        {!isFooterVisible && (
+          <div className="fixed top-0 right-0 z-10 w-full">
+            <Header />
+          </div>
+        )}
 
         {/* Main Content */}
         <div
@@ -32,6 +58,11 @@ export default function Home() {
         {/* Project Components */}
         <Project title="Project 1" snapAlign="snap-center" />
         <Project title="Project 2" snapAlign="snap-center" />
+
+        {/* Footer */}
+        <div ref={footerRef}>
+          <Footer snapAlign="snap-center" />
+        </div>
       </div>
     </>
   );
