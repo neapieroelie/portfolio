@@ -21,18 +21,18 @@ export default function Footer() {
         </div>
         <a
           href="mailto:nea.pieroelie@gmail.com"
-          className="font-instrument text-5xl tracking-tighter leading-tight hover:underline hover:text-yellow-300 transition duration-200"
+          className="body-text leading-tight hover:underline hover:text-yellow-300 transition duration-200"
         >
-          nea.pieroelie@gmail.com
+          NEA.PIEROELIE@GMAIL.COM
         </a>
-      </div >
+      </div>
 
       {/* Content */}
       <div className=" flex flex-row items-left gap-24">
         {/* Navigation */}
         <div className=" flex flex-col items-left gap-4">
-          <h1 className="font-instrument text-7xl tracking-tighter">Navigation</h1>
-          <div className="font-robotoCondensed text-4xl flex flex-col items-left gap-3">
+          <h1 className="header-text tracking-tighter">Navigation</h1>
+          <div className="body-text flex flex-col items-left gap-3">
               <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
                   PROJECTS
               </Link>
@@ -47,8 +47,8 @@ export default function Footer() {
 
         {/* Connect */}
         <div className=" flex flex-col items-left gap-4">
-          <h1 className="font-instrument text-7xl tracking-tighter">Connect</h1>
-          <div className="font-robotoCondensed text-4xl flex flex-col items-left gap-3">
+          <h1 className="header-text tracking-tighter">Connect</h1>
+          <div className="body-text flex flex-col items-left gap-3">
               <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
                 LINKEDIN
               </Link>

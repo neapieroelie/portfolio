@@ -46,7 +46,7 @@ export default function Home() {
           }}
         >
           <div className="w-full h-screen flex flex-col justify-center items-center">
-            <h1 className="font-instrument text-humongous tracking-tighter leading-26 text-white">
+            <h1 className="font-instrument text-humongous tracking-tighter leading-26 text-yellow-300	">
               Nea Kirana
             </h1>
             <p className="font-instrument text-white text-5xl">

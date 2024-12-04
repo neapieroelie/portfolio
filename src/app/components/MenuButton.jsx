@@ -13,7 +13,7 @@ export default function MenuButton() {
             {/* Menu button */}
             <div className="flex">
                 <button
-                    className="font-robotoCondensed text-4xl tracking-tighter text-white hover:text-yellow-300 transition delay-100"
+                    className="body-text text-white hover:text-yellow-300 transition delay-100"
                     onClick={toggleMenu}
                 >
                     menu
