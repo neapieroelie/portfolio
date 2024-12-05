@@ -45,11 +45,11 @@ export default function Home() {
             backgroundImage: "url('/background.jpg')",
           }}
         >
-          <div className="w-full h-screen flex flex-col justify-center items-center">
+          <div className="w-full h-screen flex flex-col justify-center items-center gap-10">
             <h1 className="font-instrument text-humongous tracking-tighter leading-26 text-yellow-300	">
               Nea Kirana
             </h1>
-            <p className="font-instrument text-white text-5xl">
+            <p className="body-text">
               UI / UX Designer and Developer
             </p>
           </div>
@@ -58,6 +58,7 @@ export default function Home() {
         {/* Project Components */}
         <Project title="Project 1" snapAlign="snap-center" />
         <Project title="Project 2" snapAlign="snap-center" />
+        <Project title="Project 3" snapAlign="snap-center" />
 
         {/* Footer */}
         <div ref={footerRef}>

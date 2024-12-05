@@ -27,9 +27,13 @@ body {
 /* TYPOGRAPHY */
 
 .body-text {
-  @apply font-robotoCondensed text-4xl tracking-tighter;
+  @apply font-robotoCondensed text-4xl tracking-tighter text-white;
 }
 
-.header-text {
+.header1-text {
   @apply font-instrument text-7xl tracking-tighter text-yellow-300;
+}
+
+.title2-text {
+  @apply font-instrument text-[200px] tracking-tighter leading-19;
 }

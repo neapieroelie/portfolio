@@ -3,7 +3,7 @@ export default function Project({ title, snapAlign = "snap-start" }) {
       <div
         className={`h-dvh bg-gray-950 grid content-center justify-center ${snapAlign}`}
       >
-        <h1 className="font-instrument text-[200px] tracking-tighter text-white">
+        <h1 className="title2-text text-white">
           {title}
         </h1>
       </div>

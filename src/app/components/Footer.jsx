@@ -31,7 +31,7 @@ export default function Footer() {
       <div className=" flex flex-row items-left gap-24">
         {/* Navigation */}
         <div className=" flex flex-col items-left gap-4">
-          <h1 className="header-text tracking-tighter">Navigation</h1>
+          <h1 className="header1-text tracking-tighter">Navigation</h1>
           <div className="body-text flex flex-col items-left gap-3">
               <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
                   PROJECTS
@@ -47,7 +47,7 @@ export default function Footer() {
 
         {/* Connect */}
         <div className=" flex flex-col items-left gap-4">
-          <h1 className="header-text tracking-tighter">Connect</h1>
+          <h1 className="header1-text tracking-tighter">Connect</h1>
           <div className="body-text flex flex-col items-left gap-3">
               <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
                 LINKEDIN
