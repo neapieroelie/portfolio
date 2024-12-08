@@ -14,14 +14,14 @@ export default function Footer() {
                 </object>
             </Link>
             <div>
-                <h1 className="font-instrument text-9xl tracking-tighter">
+                <h1 className="font-instrument text-9xl tracking-tighter ">
                     Nea Kirana
                 </h1>
             </div>
         </div>
         <a
           href="mailto:nea.pieroelie@gmail.com"
-          className="body-text leading-tight hover:underline hover:text-yellow-300 transition duration-200"
+          className="body-text leading-tight hover:underline transition duration-200"
         >
           NEA.PIEROELIE@GMAIL.COM
         </a>
@@ -33,13 +33,13 @@ export default function Footer() {
         <div className=" flex flex-col items-left gap-4">
           <h1 className="header1-text tracking-tighter">Navigation</h1>
           <div className="body-text flex flex-col items-left gap-3">
-              <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
+              <Link href="/projects" className="hover:underline transition duration-200">
                   PROJECTS
               </Link>
-              <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
+              <Link href="/projects" className="hover:underline transition duration-200">
                   RESUME
               </Link>
-              <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
+              <Link href="/projects" className="hover:underline transition duration-200">
                   ABOUT ME
               </Link>
           </div>
@@ -49,9 +49,13 @@ export default function Footer() {
         <div className=" flex flex-col items-left gap-4">
           <h1 className="header1-text tracking-tighter">Connect</h1>
           <div className="body-text flex flex-col items-left gap-3">
-              <Link href="/projects" className="hover:underline hover:text-yellow-300 transition duration-200">
-                LINKEDIN
-              </Link>
+            <a 
+              href="https://www.linkedin.com/in/nea-pieroelie/"
+              className="hover:underline transition duration-200"
+              target='_blank'
+            >
+              LINKEDIN
+            </a>
           </div>
         </div>
       </div>

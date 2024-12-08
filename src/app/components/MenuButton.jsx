@@ -27,26 +27,26 @@ export default function MenuButton() {
                     isMenuOpen ? "translate-y-0" : "-translate-y-full"
                 }`}
             >
-                <div className="text-center flex flex-col title2-text">
-                    <Link href="./pages/projects">
+                <div className="text-center flex flex-col title2-text text-blue-700">
+                    <Link href="./projects">
                         <button
-                            className="hover:text-red-600 transition delay-100 hover:scale-110 "
+                            className="hover:text-red-600 transition delay-50 hover:scale-110 "
                             onClick={toggleMenu}
                         >
                             Projects
                         </button>
                     </Link>
-                    <Link href="./pages/resume">
+                    <Link href="./resume">
                         <button
-                            className="hover:text-red-600 transition delay-100 hover:scale-110"
+                            className="hover:text-red-600 transition delay-50 hover:scale-110"
                             onClick={toggleMenu}
                         >
                             Resume
                         </button>
                     </Link>
-                    <Link href="./pages/about-me">
+                    <Link href="./about-me">
                         <button
-                            className="hover:text-red-600 transition delay-100 hover:scale-110"
+                            className="hover:text-red-600 transition delay-50 hover:scale-110"
                             onClick={toggleMenu}
                         >
                             About me
