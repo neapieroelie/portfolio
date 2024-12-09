@@ -47,7 +47,7 @@ export default function Home() {
               alt="My Resume" 
               width={400} 
               height={1000} 
-              className="object-contain transition-transform duration-300 hover:scale-125"
+              className="object-contain transition-transform duration-300 hover:scale-125 drop-shadow-2xl"
             />
         </div>
 

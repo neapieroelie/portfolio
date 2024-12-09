@@ -40,7 +40,7 @@ export default function Home() {
 
         {/* Main Content */}
         <div
-          className="w-full min-h-screen bg-cover bg-center z-0 snap-start"
+          className="w-full min-h-screen bg-cover bg-center z-0 snap-start bg-pink-500"
           style={{
             backgroundImage: "url('/background.jpg')",
           }}
@@ -56,10 +56,8 @@ export default function Home() {
         </div>
 
         {/* Project Components */}
-        <Project title="Project 1" snapAlign="snap-center" />
-        <Project title="Project 2" snapAlign="snap-center" />
-        <Project title="Project 3" snapAlign="snap-center" />
-
+        <Project title="AI Powered Interview Coaching App" snapAlign="snap-center" text="text-right"/>
+        
         {/* Footer */}
         <div ref={footerRef}>
           <Footer snapAlign="snap-center" />

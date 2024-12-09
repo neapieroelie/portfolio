@@ -1,22 +1,24 @@
 import MenuButton from "./MenuButton";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Header () {
     return (
         <>
-            <div className=" flex flex-row items-center justify-between w-screen px-10 py-7 ">
+            <div className="flex flex-row items-center justify-between w-screen px-10 py-7">
                 {/* SVG Logo */}
                 <div className="flex justify-start">
-                    <Link href="#">
-                        <object 
-                            data="/logo_white.svg" 
-                            type="image/svg+xml"
-                            className="h-14">
-                        </object>
-                    </Link>
+                    <a href="/">
+                        <Image 
+                            src="/logo_white.svg" 
+                            alt="Logo" 
+                            width={56} 
+                            height={56} 
+                        />
+                    </a>
                 </div>
+
                 <div>
-                    <MenuButton/>
+                    <MenuButton />
                 </div>
             </div>
         </>

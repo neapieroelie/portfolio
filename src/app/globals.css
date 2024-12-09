@@ -37,3 +37,7 @@ body {
 .title2-text {
   @apply font-instrument text-[200px] tracking-tighter leading-19;
 }
+
+.title3-text {
+  @apply font-instrument text-[115px] tracking-tighter leading-14;
+}
