@@ -36,7 +36,7 @@ export default function Footer() {
               <Link href="/projects" className="hover:underline transition duration-200">
                   PROJECTS
               </Link>
-              <Link href="/projects" className="hover:underline transition duration-200">
+              <Link href="/resume" className="hover:underline transition duration-200">
                   RESUME
               </Link>
               <Link href="/projects" className="hover:underline transition duration-200">
