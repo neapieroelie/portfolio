@@ -10,7 +10,9 @@ export default function AboutMe() {
                 <Header />
             </div>
             <div className=" z-0 ">
-                <PageNotDone/>
+                <PageNotDone
+                    title="About Me Page"
+                />
             </div>
         </>
     )

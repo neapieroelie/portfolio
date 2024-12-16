@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Project from "./components/ProjectPage";
+import Project from "./components/ProjectSection";
 
 export default function Home() {
   const [isFooterVisible, setIsFooterVisible] = useState(false);

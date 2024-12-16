@@ -10,7 +10,9 @@ export default function Projects() {
                 <Header />
             </div>
             <div className=" z-0 ">
-                <PageNotDone/>
+                <PageNotDone
+                    title="Projects Page"
+                />
             </div>
         </>
     )
