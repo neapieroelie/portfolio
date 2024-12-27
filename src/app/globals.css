@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -40,4 +41,20 @@ body {
 
 .title3-text {
   @apply font-instrument text-[115px] tracking-tighter leading-14;
+}
+
+.onward-number-text {
+  @apply font-plusJakartaSans text-[85px] text-slate-200 font-extrabold leading-12;
+}
+
+.onward-h1-text {
+  @apply font-plusJakartaSans text-[35px] text-gray-700 font-semibold leading-none tracking-tight;
+}
+
+.onward-title-text {
+  @apply font-plusJakartaSans text-[75px] text-gray-700 font-bold leading-none tracking-tight;
+}
+
+.onward-body-text {
+  @apply font-plusJakartaSans text-[20px] text-gray-700 font-medium leading-normal tracking-tight;
 }

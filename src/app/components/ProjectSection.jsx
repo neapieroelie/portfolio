@@ -8,8 +8,7 @@ export default function Project({ text = "text-center", title, snapAlign = "snap
       >
         <Link 
           href="/onward" 
-          className="object-contain"
-          >
+          className="object-contain">
           <div className=" bg-gray-950 flex flex-row items-center justify-center gap-10">
             <h1 className={`title3-text text-white ${text}`}>
               {title}

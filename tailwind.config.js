@@ -15,6 +15,7 @@ module.exports = {
         instrument : ['Instrument Serif', 'serif'],
         dmSans: ['DM Sans', 'sans-serif'],
         robotoCondensed: ['Roboto Condensed', 'sans-serif'],
+        plusJakartaSans: ['Plus Jakarta Sans', 'serif']
       },
       fontSize: {
         10 : '10rem',
@@ -46,6 +47,13 @@ module.exports = {
       },
       colors: {
         'hot-pink': '#FF2E5F',
+      },
+      slide: {
+        "0%": { transform: "translateY(100%)", opacity: 0.1 },
+        "15%": { transform: "translateY(0)", opacity: 1 },
+        "30%": { transform: "translateY(0)", opacity: 1 },
+        "45%": { transform: "translateY(-100%)", opacity: 1 },
+        "100%": { transform: "translateY(-100%)", opacity: 0.1 },
       },
     },
   },
