@@ -49,9 +49,7 @@ export default function Home() {
             <h1 className="font-instrument text-humongous tracking-tighter leading-26 text-yellow-300	">
               Nea Kirana
             </h1>
-            <div>
-              
-            </div>
+            <p className="body-text">UI / çUX Designer</p>
           </div>
         </div>
 
