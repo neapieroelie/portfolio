@@ -49,7 +49,10 @@ export default function Home() {
             <h1 className="font-instrument text-humongous tracking-tighter leading-26 text-yellow-300	">
               Nea Kirana
             </h1>
-            <p className="body-text">UI / UX Designer</p>
+            <p className="body-text">UI / UX Product Designer based in Vancouver, BC</p>
+            <div>
+              <p></p>
+            </div>
           </div>
         </div>
 
