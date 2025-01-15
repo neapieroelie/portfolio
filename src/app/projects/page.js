@@ -3,6 +3,7 @@
 import Header from "../components/Header"
 import PageNotDone from "../components/PageNotDone"
 import Image from "next/image"
+import ProjectComponent from "../components/ProjectComponent"
 
 export default function Projects() {
     return (
@@ -11,8 +12,19 @@ export default function Projects() {
                 <Header />
             </div>
             <div className=" w-full h-dvh flex z-0 ">
-                <div>
-                    
+                <div className="  ">
+                    <ProjectComponent 
+                        title="Onward Web Application"
+                    />
+                    <ProjectComponent 
+                        title="Onward Web Application"
+                    />
+                    <ProjectComponent 
+                        title="Onward Web Application"
+                    />
+                    <ProjectComponent 
+                        title="Onward Web Application"
+                    />
                 </div>
             </div>
         </>
