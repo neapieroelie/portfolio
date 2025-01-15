@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Project from "./components/ProjectSection";
+import BouncingText from "./components/BouncingText";
 
 export default function Home() {
   const [isFooterVisible, setIsFooterVisible] = useState(false);
@@ -30,7 +31,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory">
+      <div className="w-full h-dvh overflow-y-auto snap-y snap-mandatory">
+
         {/* Header */}
         {!isFooterVisible && (
           <div className="fixed top-0 right-0 z-10 w-full">
@@ -40,21 +42,22 @@ export default function Home() {
 
         {/* Main Content */}
         <div
-          className="w-full min-h-screen bg-cover bg-center z-0 snap-start bg-pink-500"
+          className="w-full h-screen bg-cover bg-center z-0 snap-start relative"
           style={{
             backgroundImage: "url('/background.jpg')",
           }}
         >
-          <div className="w-full h-screen flex flex-col justify-center items-center gap-10">
-            <h1 className="font-instrument text-humongous tracking-tighter leading-26 text-yellow-300	">
+          {/* Title */}
+          <div className="h-screen flex flex-col justify-center items-center gap-10">
+            <h1 className="font-instrument text-giant tracking-tighter leading-26 text-yellow-300">
               Nea Kirana
             </h1>
             <p className="body-text">UI / UX Product Designer based in Vancouver, BC</p>
-            <div>
-              <p></p>
-            </div>
           </div>
+          <BouncingText title="Recent Projects"/>
+          
         </div>
+
 
         {/* Project Components */}
         <Project title="AI Powered Interview Coaching App" snapAlign="snap-center" text="text-right"/>

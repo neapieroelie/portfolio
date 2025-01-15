@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="flex flex-row items-center justify-between w-full h-dvh px-24 bg-gray-950 text-white snap-center ">
+    <div className="flex flex-row items-center justify-between w-full h-dvh px-24 text-white snap-center ">
       {/* Logo */}
       <div className=" flex flex-col justify-start items-left ">
         <div className=" flex flex-row justify-center items-center gap-5">
@@ -20,10 +20,10 @@ export default function Footer() {
             </div>
         </div>
         <a
-          href="mailto:nea.pieroelie@gmail.com"
+          href="mailto:nea@neakirana.com"
           className="body-text leading-tight hover:underline transition duration-200"
         >
-          NEA.PIEROELIE@GMAIL.COM
+          NEA@NEAKIRANA.COM
         </a>
       </div>
 
@@ -41,6 +41,9 @@ export default function Footer() {
               </Link>
               <Link href="/about-me" className="hover:underline transition duration-200">
                   ABOUT ME
+              </Link>
+              <Link href="/about-me" className="hover:underline transition duration-200">
+                  HOME
               </Link>
           </div>
         </div>
