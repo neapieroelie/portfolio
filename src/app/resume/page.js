@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Image from "next/image";
 
-export default function Home() {
+export default function Resume() {
   const [isFooterVisible, setIsFooterVisible] = useState(false);
   const footerRef = useRef(null);
 
@@ -45,8 +45,8 @@ export default function Home() {
             <Image 
               src="/resume.png" 
               alt="My Resume" 
-              width={400} 
-              height={1000} 
+              width={500} 
+              height={900} 
               className="object-contain transition-transform duration-300 hover:scale-125 drop-shadow-2xl"
             />
         </div>

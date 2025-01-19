@@ -8,7 +8,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #0b0b0b;
+  --background: #fdfcfc;
   --foreground: #131313;
 }
 
@@ -28,27 +28,30 @@ body {
 /* TYPOGRAPHY */
 
 .body-text {
-  @apply font-robotoCondensed text-4xl tracking-tighter text-white;
+  @apply font-robotoCondensed text-4xl tracking-tighter text-neutral-800;
 }
 
+.description-text {
+  @apply font-robotoCondensed text-2xl tracking-tight text-neutral-800;
+}
 .bouncing-text {
   @apply font-robotoCondensed text-xl tracking-tighter text-white;
 }
 
 .header1-text {
-  @apply font-instrument text-7xl tracking-tighter text-yellow-300;
+  @apply font-instrument text-7xl tracking-tight text-yellow-300;
 }
 
 .title2-text {
-  @apply font-instrument text-[200px] tracking-tighter leading-19;
+  @apply font-instrument text-[150px] tracking-tight leading-17;
 }
 
 .title3-text {
-  @apply font-instrument text-[115px] tracking-tighter leading-14;
+  @apply font-instrument text-[115px] tracking-tight leading-14;
 }
 
 .title4-text {
-  @apply font-instrument text-[50px] tracking-tighter leading-14;
+  @apply font-instrument text-5xl font-medium tracking-normal leading-10;
 }
 
 .onward-number-text {

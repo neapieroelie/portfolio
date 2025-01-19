@@ -43,13 +43,10 @@ export default function Home() {
         {/* Main Content */}
         <div
           className="w-full h-screen bg-cover bg-center z-0 snap-start relative"
-          style={{
-            backgroundImage: "url('/background.jpg')",
-          }}
         >
           {/* Title */}
           <div className="h-screen flex flex-col justify-center items-center gap-10">
-            <h1 className="font-instrument text-giant tracking-tighter leading-26 text-yellow-300">
+            <h1 className="font-instrument text-large tracking-tight leading-22 text-yellow-400">
               Nea Kirana
             </h1>
             <p className="body-text">UI / UX Product Designer based in Vancouver, BC</p>
@@ -60,8 +57,27 @@ export default function Home() {
 
 
         {/* Project Components */}
-        <Project title="AI Powered Interview Coaching App" snapAlign="snap-center" text="text-right"/>
-        
+        <Project
+          image="/onward_front.png"
+          title="Onward"
+          description="AI Powered Interview Coaching App"
+          snapAlign="snap-center"
+          text="text-right"
+          width={900}
+          height={100}
+          bouncingText="Next Project"
+        />
+        <Project
+          image="/fairshare_front.png"
+          title="FairShare"
+          description="Split billing app for tracking and settling group expenses"
+          snapAlign="snap-center"
+          text="text-right"
+          width={900}
+          height={100}
+          bouncingText="Next Project"
+        />
+          
         {/* Footer */}
         <div ref={footerRef}>
           <Footer snapAlign="snap-center" />

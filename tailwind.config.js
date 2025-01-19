@@ -20,6 +20,7 @@ module.exports = {
       fontSize: {
         10 : '10rem',
         11 : '12rem',
+        large: '20rem',
         giant: '22rem',
         massive : '23rem',
         humongous : '25rem'

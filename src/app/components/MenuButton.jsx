@@ -28,6 +28,14 @@ export default function MenuButton() {
                 }`}
             >
                 <div className="text-center flex flex-col title2-text text-blue-700">
+                    <Link href="/#">
+                        <button
+                            className="hover:text-red-600 transition delay-50 hover:scale-110 "
+                            onClick={toggleMenu}
+                        >
+                            Home
+                        </button>
+                    </Link>
                     <Link href="./projects">
                         <button
                             className="hover:text-red-600 transition delay-50 hover:scale-110 "
