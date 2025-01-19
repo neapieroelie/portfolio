@@ -31,6 +31,7 @@ export default function Resume() {
   return (
     <>
       <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory">
+        
         {/* Header */}
         {!isFooterVisible && (
           <div className="fixed top-0 right-0 z-10 w-full">
@@ -39,9 +40,7 @@ export default function Resume() {
         )}
 
         {/* Main Content */}
-        <div
-          className="flex justify-center content-center w-full min-h-screen bg-cover bg-center z-0 snap-start"
-        >
+        <div className="flex justify-center content-center w-full min-h-screen bg-cover bg-center z-0 snap-start">
             <Image 
               src="/resume.png" 
               alt="My Resume" 

@@ -9,7 +9,7 @@ export default function Header () {
                 <div className="flex justify-start">
                     <a href="/">
                         <Image 
-                            src="/logo_black.svg" 
+                            src="/logo_pink.svg" 
                             alt="Logo" 
                             width={56} 
                             height={56} 

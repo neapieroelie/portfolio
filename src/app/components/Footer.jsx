@@ -8,13 +8,13 @@ export default function Footer() {
         <div className=" flex flex-row justify-center items-center gap-5">
             <Link href="#">
                 <object 
-                    data="/logo_black.svg" 
+                    data="/logo_pink.svg" 
                     type="image/svg+xml"
                     className="h-[90px]">
                 </object>
             </Link>
             <div>
-                <h1 className="font-instrument text-9xl tracking-tight text-neutral-800">
+                <h1 className="font-instrument text-9xl tracking-tight text-[#FF2E8D]">
                     Nea Kirana
                 </h1>
             </div>
@@ -32,7 +32,7 @@ export default function Footer() {
         {/* Navigation */}
         <div className=" flex flex-col items-left gap-4">
           <h1 className="header1-text tracking-tighter">Navigation</h1>
-          <div className="body-text flex flex-col items-left gap-3">
+          <div className="body-text text-neutral-400 flex flex-col items-left gap-3">
             <Link href="/#" 
                   className="hover:underline transition duration-200">
                   HOME

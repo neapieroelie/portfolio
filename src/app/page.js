@@ -46,7 +46,7 @@ export default function Home() {
         >
           {/* Title */}
           <div className="h-screen flex flex-col justify-center items-center gap-10">
-            <h1 className="font-instrument text-large tracking-tight leading-22 text-yellow-400">
+            <h1 className="font-instrument text-large tracking-tight leading-22 text-[#FF2E8D]">
               Nea Kirana
             </h1>
             <p className="body-text">UI / UX Product Designer based in Vancouver, BC</p>

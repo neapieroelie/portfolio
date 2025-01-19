@@ -39,7 +39,7 @@ body {
 }
 
 .header1-text {
-  @apply font-instrument text-7xl tracking-tight text-yellow-300;
+  @apply font-instrument text-7xl tracking-tight text-neutral-800;
 }
 
 .title2-text {
