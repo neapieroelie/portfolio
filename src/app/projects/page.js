@@ -43,16 +43,19 @@ export default function Projects() {
                 <div className=" w-full h-dvh flex z-0 justify-center items-center snap-start ">
                     <div className=" grid grid-cols-2 gap-4 ">
                         <ProjectComponent 
-                            title="Onward Web Application"
+                            image="/onward_front.png"
+                            number="1."
+                            title="Onward Web App"
                         />
                         <ProjectComponent 
-                            title="Onward Web Application"
+                            image="/fairshare_front.png"
+                            number="2."
+                            title="FairShare App"
                         />
                         <ProjectComponent 
-                            title="Onward Web Application"
-                        />
-                        <ProjectComponent 
-                            title="Onward Web Application"
+                            image="/safecycle_front.png"
+                            number="3."
+                            title="SafeCycle App"
                         />
                     </div>
                 </div>
