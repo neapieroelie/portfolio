@@ -41,13 +41,13 @@ export default function Resume() {
 
         {/* Main Content */}
         <div className="flex justify-center content-center w-full min-h-screen bg-cover bg-center z-0 snap-start">
-            <Image 
+            {/* <Image 
               src="/resume.png" 
               alt="My Resume" 
               width={500} 
               height={900} 
               className="object-contain transition-transform duration-300 hover:scale-125 drop-shadow-2xl"
-            />
+            /> */}
         </div>
 
         {/* Footer */}
