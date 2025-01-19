@@ -60,7 +60,7 @@ export default function Home() {
         <Project
           image="/onward_front.png"
           title="Onward"
-          description="AI Powered Interview Coaching App"
+          description="AI Powered Interview Coaching App."
           snapAlign="snap-center"
           text="text-right"
           width={900}
@@ -70,14 +70,23 @@ export default function Home() {
         <Project
           image="/fairshare_front.png"
           title="FairShare"
-          description="Split billing app for tracking and settling group expenses"
+          description="Split billing app for tracking and settling group expenses."
           snapAlign="snap-center"
           text="text-right"
           width={900}
           height={100}
           bouncingText="Next Project"
         />
-          
+        <Project
+          image="/safecycle_front.png"
+          title="SafeCycle"
+          description="A cyclist app for navigation, tracking, and safety."
+          snapAlign="snap-center"
+          text="text-right"
+          width={900}
+          height={100}
+          bouncingText="Next Project"
+        />
         {/* Footer */}
         <div ref={footerRef}>
           <Footer snapAlign="snap-center" />
