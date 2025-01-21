@@ -1,3 +1,5 @@
+
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -49,6 +51,7 @@ module.exports = {
       },
       colors: {
         'hot-pink': '#FF2E5F',
+        accentColor: "#FF2E8D",
       },
       slide: {
         "0%": { transform: "translateY(100%)", opacity: 0.1 },

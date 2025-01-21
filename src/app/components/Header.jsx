@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Header () {
     return (
         <>
-            <div className="flex flex-row items-center justify-between w-screen px-10 py-7">
+            <div className="flex flex-row items-center justify-between w-screen px-10 pt-4 pb-2 bg-[#fdfcfc]">
                 {/* SVG Logo */}
                 <div className="flex justify-start">
                     <a href="/">

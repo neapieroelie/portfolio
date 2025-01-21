@@ -8,7 +8,7 @@ export default function ProjectComponent({title, image, number}) {
                 <Image
                     src={image}
                     alt="Project Image" 
-                    width={550} 
+                    width={400} 
                     height={242.91} 
                     className="object-contain"
                 />

@@ -6,7 +6,7 @@ export default function Project({ text = "text-center", title, snapAlign = "snap
   return (
     <div className={`relative h-screen flex justify-center items-center px-20 ${snapAlign}`}>
       <Link href="#" className="object-contain">
-        <div className="flex flex-col items-left gap-3 justify-center hover:scale-110 duration-300">
+        <div className="flex flex-col items-left gap-3 justify-center">
           <h1 className="title4-text">{title}</h1>
           <Image
             src={image}
