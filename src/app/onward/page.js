@@ -79,19 +79,19 @@ export default function SnappingPage() {
                         </div>
                         <div
                             ref={problemRef}
-                            className="h-screen flex items-center justify-center bg-blue-200 snap-start"
+                            className="h-screen flex items-center justify-center snap-start"
                         >
                             <h1 className="text-4xl font-bold">Problem Section</h1>
                         </div>
                         <div
                             ref={solutionRef}
-                            className="h-screen flex items-center justify-center bg-green-200 snap-start"
+                            className="h-screen flex items-center justify-center snap-start"
                         >
                             <h1 className="text-4xl font-bold">Solution Section</h1>
                         </div>
                         <div
                             ref={designRef}
-                            className="h-screen flex items-center justify-center bg-yellow-200 snap-start"
+                            className="h-screen flex items-center justify-center snap-start"
                         >
                             <h1 className="text-4xl font-bold">Design Section</h1>
                         </div>
