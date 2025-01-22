@@ -67,6 +67,7 @@ export default function Home() {
           width={900}
           height={100}
           bouncingText="Next Project"
+          link="/onward"
         />
         <Project
           image="/fairshare_front.png"
@@ -77,6 +78,7 @@ export default function Home() {
           width={900}
           height={100}
           bouncingText="Next Project"
+          link="#"
         />
         <Project
           image="/safecycle_front.png"
@@ -87,6 +89,7 @@ export default function Home() {
           width={900}
           height={100}
           bouncingText="Next Project"
+          link="#"
         />
         {/* Footer */}
         <div ref={footerRef}>

@@ -71,5 +71,5 @@ body {
 }
 
 .onward-body-text {
-  @apply font-plusJakartaSans text-[20px] text-gray-700 font-medium leading-normal tracking-tight;
+  @apply font-plusJakartaSans text-[16px] text-gray-700 font-medium leading-normal tracking-tight;
 }
