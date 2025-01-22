@@ -19,24 +19,16 @@ export default function Carousel({ images = [] }) {
   return (
     <div className="relative w-full h-screen flex flex-col items-center justify-center">
         {/* Image Container */}
-        <div className="relative flex flex-col items-left ">
-            {/* Title */}
-            <h1 className="title4-text align px-12">
-                Features
-            </h1>
-
-            {/* Image */}
             <div className="flex justify-center items-center px-12">
-            <Image
-                src={images[currentIndex]}
-                alt={`Slide ${currentIndex + 1}`}
-                width={900}
-                height={300}
-                objectFit="contain"
-                className=""
-            />
+                <Image
+                    src={images[currentIndex]}
+                    alt={`Slide ${currentIndex + 1}`}
+                    width={900}
+                    height={300}
+                    objectFit="contain"
+                    className=""
+                />
             </div>
-        </div>
 
         {/* Previous Button */}
         <button

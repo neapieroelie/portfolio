@@ -7,7 +7,7 @@ export default function BouncingText({ title }) {
         {/* Down Arrow */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8 text-white"
+          className="h-8 w-8 text-neutral-800"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

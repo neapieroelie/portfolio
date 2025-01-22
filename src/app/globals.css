@@ -35,7 +35,7 @@ body {
   @apply font-robotoCondensed text-2xl tracking-tight text-neutral-800;
 }
 .bouncing-text {
-  @apply font-robotoCondensed text-xl tracking-tighter text-white;
+  @apply font-robotoCondensed text-xl tracking-tighter text-neutral-800;
 }
 
 .header1-text {
@@ -43,19 +43,19 @@ body {
 }
 
 .title2-text {
-  @apply font-instrument text-[150px] tracking-tight leading-17;
+  @apply font-instrument text-[150px] tracking-tight leading-17 text-slate-100;
 }
 
 .title3-text {
-  @apply font-instrument text-[115px] tracking-tight leading-14;
+  @apply font-instrument text-[115px] tracking-tight leading-14 text-neutral-800;
 }
 
 .title4-text {
-  @apply font-instrument text-5xl font-medium tracking-normal leading-10;
+  @apply font-instrument text-5xl font-medium tracking-normal leading-10 text-neutral-800;
 }
 
 .title5-text {
-  @apply font-instrument text-3xl font-medium tracking-normal leading-6;
+  @apply font-instrument text-3xl font-medium tracking-normal leading-6 text-neutral-800;
 }
 
 .onward-number-text {
