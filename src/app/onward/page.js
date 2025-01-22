@@ -169,7 +169,7 @@ export default function SnappingPage() {
                             data-section="how"
                             className="h-screen flex items-center justify-center snap-start"
                         >
-                            <h1 className="text-4xl font-bold">Design Section</h1>
+                            <p></p>
                         </div>
                     </div>
                 </div>
