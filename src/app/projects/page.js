@@ -40,12 +40,12 @@ export default function Projects() {
                     </div>
                 )}
                 {/* Main Content */}
-                <div className=" w-full h-dvh flex z-0 justify-center items-center snap-start ">
+                <div className=" w-full h-dvh flex z-0 justify-center items-center snap-start p-5">
                     <div className=" 
-                      base: grid gap-4
+                      base: grid 
                       sm: grid-cols-1
-                      md: md:grid-cols-2
-                      lg: lg:grid-cols-2
+                      md: md:grid-cols-2 md:gap-3
+                      lg: lg:grid-cols-2 lg:gap-4
                     ">
                         <ProjectComponent 
                             image="/onward_front.png"
