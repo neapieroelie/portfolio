@@ -5,7 +5,7 @@ import Carousel from "../components/Carousel";
 import Header from "../components/Header";
 import Image from "next/image";
 
-export default function SnappingPage() {
+export default function FairShare() {
     const overviewRef = useRef(null);
     const issueRef = useRef(null);
     const actionRef = useRef(null);
@@ -18,8 +18,8 @@ export default function SnappingPage() {
     };
 
     const projectImages = [
-        "/1_upload_resume_and_job_posting.png",
-        "/2_tailored_interview_questions.png",
+        "/fairshare_mockup_1.png",
+        "/fairshare_mockup_2.png",
         "/3_text_or_speech.png",
         "/4_instant_feedback.png",
     ];

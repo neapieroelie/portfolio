@@ -41,7 +41,12 @@ export default function Projects() {
                 )}
                 {/* Main Content */}
                 <div className=" w-full h-dvh flex z-0 justify-center items-center snap-start ">
-                    <div className=" grid grid-cols-2 gap-4 ">
+                    <div className=" 
+                      base: grid gap-4
+                      sm: grid-cols-1
+                      md: md:grid-cols-2
+                      lg: lg:grid-cols-2
+                    ">
                         <ProjectComponent 
                             image="/onward_front.png"
                             number="1."
@@ -52,7 +57,7 @@ export default function Projects() {
                             image="/fairshare_front.png"
                             number="2."
                             title="FairShare App"
-                            link="#"
+                            link="fairShare"
                         />
                         <ProjectComponent 
                             image="/safecycle_front.png"

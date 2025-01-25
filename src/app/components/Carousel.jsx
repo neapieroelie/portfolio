@@ -19,11 +19,11 @@ export default function Carousel({ images = [] }) {
   return (
     <div className="relative w-full h-screen flex flex-col items-center justify-center">
         {/* Image Container */}
-            <div className="flex justify-center items-center px-12">
+            <div className="flex justify-center items-center">
                 <Image
                     src={images[currentIndex]}
                     alt={`Slide ${currentIndex + 1}`}
-                    width={900}
+                    width={750}
                     height={300}
                     objectFit="contain"
                     className=""
@@ -73,7 +73,7 @@ export default function Carousel({ images = [] }) {
         </button>
 
         {/* Indicators */}
-        <div className="absolute bottom-4 flex gap-2">
+        <div className="absolute bottom-4 flex gap-2 transition delay-100">
             {images.map((_, index) => (
             <button
                 key={index}

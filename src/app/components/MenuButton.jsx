@@ -27,7 +27,12 @@ export default function MenuButton() {
                     isMenuOpen ? "translate-y-0" : "-translate-y-full"
                 }`}
             >
-                <div className="text-center flex flex-col title2-text text-neutral-100">
+                <div className="
+                    base: flex flex-col font-instrument text-center tracking-tight text-neutral-100
+                    sm: text-[80px] leading-14
+                    md: md:text-[150px] md:leading-17
+                    lg: lg:text-[150px] lg:leading-17
+                ">
                     <Link href="/#">
                         <button
                             className="hover:text-[#FF2E8D] transition delay-50 hover:scale-110 "

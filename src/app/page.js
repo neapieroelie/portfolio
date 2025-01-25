@@ -43,14 +43,29 @@ export default function Home() {
 
         {/* Main Content */}
         <div
-          className="w-full h-screen bg-cover bg-center z-0 snap-start relative"
+          className="w-dvw h-screen z-0 snap-start relative "
         >
           {/* Title */}
-          <div className="h-screen flex flex-col justify-center items-center gap-10">
-            <h1 className="font-instrument text-large tracking-tight leading-22 text-[#FF2E8D]">
+          <div className="
+            base: h-dvh w-dvw flex flex-col justify-center items-left gap-10
+            sm: p-5
+            md: md:p-10
+            lg: lg:items-center
+          ">
+            <h1 className="
+              font-instrument tracking-tight text-[#FF2E8D] text-left
+              sm: text-10 leading-16
+              md: md:text-medium md:leading-22
+              lg: lg:text-large lg:leading-24
+            ">
               Nea Kirana
             </h1>
-            <p className="body-text">UI / UX Product Designer based in Vancouver, BC</p>
+            <p className="
+              base: font-robotoCondensed tracking-tighter text-neutral-800
+              sm: text-3xl text-left
+              md: md:text-4xl
+              lg: lg:text-4xl 
+            ">UI / UX Product Designer based in Vancouver, BC</p>
           </div>
           <BouncingText title="Recent Projects"/>
           
@@ -78,7 +93,7 @@ export default function Home() {
           width={900}
           height={100}
           bouncingText="Next Project"
-          link="#"
+          link="/fairShare"
         />
         <Project
           image="/safecycle_front.png"
