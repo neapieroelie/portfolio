@@ -41,7 +41,7 @@ export default function Projects() {
                 )}
                 {/* Main Content */}
                 <div className=" 
-                base: w-full flex z-0 justify-center items-center snap-start p-5
+                base: w-full flex z-0 justify-center items-center snap-start p-10
                 sm: h-full pt-[4rem]
                 md: md:h-dvh md:pt-0
                 lg: lg:h-dvh lg:pt-0">
