@@ -6,7 +6,7 @@ export default function ProjectComponent({title, image, number, link}) {
         <>
         <div>
             <Link href={link}>
-                <div className=" flex flex-col md:gap-1 lg:gap-2">
+                <div className=" flex flex-col md:gap-1 lg:gap-2 px-5 md:px-10">
                     <p className="
                         base: font-instrument  font-medium tracking-normal leading-6 text-neutral-800
                         sm: text-xl
