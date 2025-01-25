@@ -2,7 +2,7 @@ export default function BouncingText({ title }) {
 
     
     return (
-      <div className="absolute bottom-10 w-dvw flex flex-col items-center z-10 animate-bounce">
+      <div className="absolute bottom-20 w-dvw flex flex-col items-center z-10 animate-bounce">
         <p className="bouncing-text">{title}</p>
         {/* Down Arrow */}
         <svg
