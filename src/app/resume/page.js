@@ -54,9 +54,12 @@ export default function Resume() {
             <Image
               src="/resume_updated_2025.png"
               alt="My Resume"
-              width={400}
-              height={600}
-              className="object-contain transition-transform duration-300 hover:scale-105 drop-shadow-2xl"
+              width={300}
+              height={500}
+              className="
+                base: object-contain transition-transform duration-300 hover:scale-105 drop-shadow-xl
+                md:w-[400px] md:h-[600px]
+                lg:w-[500px] lg:h-[700px]"
             />
           </div>
         </div>
@@ -70,7 +73,11 @@ export default function Resume() {
             {/* Close Button */}
             <button
               onClick={handleCloseModal}
-              className="fixed top-10 right-4 pr-10 text-black rounded-full p-2 transition z-50 font-instrument text-4xl hover:text-neutral-500 transition delay-100"
+              className="
+                base: fixed text-black rounded-full transition z-50 font-instrument hover:text-neutral-500 transition delay-100
+                sm: top-8 right-4 pr-3 text-2xl
+                md: md:top-10 md:right-4 md:pr-10 md:text-4xl
+                lg: lg:top-10 lg:right-4 lg:pr-10 lg:text-4xl"
               aria-label="Close"
             >
               X
@@ -78,7 +85,7 @@ export default function Resume() {
 
             {/* Zoomed Image */}
             <div
-              className="relative w-full h-full overflow-auto"
+              className="relative w-full md:h-full lg:h-full overflow-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <Image
@@ -86,7 +93,7 @@ export default function Resume() {
                 alt="Zoomed Resume"
                 width={1000}
                 height={1400}
-                className="object-contain mx-auto"
+                className=" object-contain mx-auto "
               />
             </div>
           </div>
