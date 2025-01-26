@@ -73,9 +73,9 @@ export default function Projects() {
                 </div>
                 
                 {/* Footer */}
-                <div ref={footerRef}>
+                {/* <div ref={footerRef}>
                     <Footer snapAlign="snap-start" />
-                </div>
+                </div> */}
             </div>
         </>
     )
