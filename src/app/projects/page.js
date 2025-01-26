@@ -41,7 +41,7 @@ export default function Projects() {
                 )}
                 {/* Main Content */}
                 <div className=" 
-                base: w-full flex z-0 justify-center items-center
+                base: w-full flex z-0 justify-center items-center snap-start
                 sm: h-auto
                 md: md:h-dvh 
                 lg: lg:h-dvh">
@@ -74,7 +74,7 @@ export default function Projects() {
                 
                 {/* Footer */}
                 <div ref={footerRef}>
-                    <Footer snapAlign="snap-center" />
+                    <Footer snapAlign="snap-start" />
                 </div>
             </div>
         </>
