@@ -42,7 +42,7 @@ export default function Projects() {
                 {/* Main Content */}
                 <div className=" 
                 base: w-full flex z-0 justify-center items-center snap-start
-                sm: h-[calc(100vh-10vh)] overflow-y-auto
+                sm: h-auto
                 md: md:h-dvh 
                 lg: lg:h-dvh">
                     <div className=" 
