@@ -42,14 +42,14 @@ export default function Projects() {
                 {/* Main Content */}
                 <div className=" 
                 base: w-full flex z-0 justify-center items-center snap-start
-                sm: h-auto
+                sm: h-[calc(100vh-60px)] overflow-y-auto
                 md: md:h-dvh 
                 lg: lg:h-dvh">
                     <div className=" 
                       base: grid gap-1 px-5 pt-[6rem]
                       sm: grid-cols-1
-                      md: md:grid-cols-2 md:gap-3
-                      lg: lg:grid-cols-2 lg:gap-4
+                      md: md:grid-cols-2 md:gap-3 md:pt-0
+                      lg: lg:grid-cols-2 lg:gap-4 lg:pt-0
                     ">
                         <ProjectComponent 
                             image="/onward_front.png"
@@ -74,7 +74,9 @@ export default function Projects() {
                 
                 {/* Footer */}
                 <div ref={footerRef}>
-                    <Footer snapAlign="snap-center" />
+                    <Footer 
+                      className="w-full h-screen snap-y snap-mandatory overflow-y-auto" 
+                      snapAlign="snap-center" />
                 </div>
             </div>
         </>
