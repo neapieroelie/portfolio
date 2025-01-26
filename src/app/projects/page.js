@@ -42,7 +42,7 @@ export default function Projects() {
                 {/* Main Content */}
                 <div className=" 
                 base: w-full flex z-0 justify-center items-center snap-start
-                sm: h-[calc(100vh-60px)] overflow-y-auto
+                sm: h-[calc(100vh-10vh)] overflow-y-auto
                 md: md:h-dvh 
                 lg: lg:h-dvh">
                     <div className=" 
@@ -74,9 +74,7 @@ export default function Projects() {
                 
                 {/* Footer */}
                 <div ref={footerRef}>
-                    <Footer 
-                      className="w-full h-screen snap-y snap-mandatory overflow-y-auto" 
-                      snapAlign="snap-center" />
+                    <Footer snapAlign="snap-center" />
                 </div>
             </div>
         </>
