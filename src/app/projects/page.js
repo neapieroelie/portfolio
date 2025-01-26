@@ -42,11 +42,11 @@ export default function Projects() {
                 {/* Main Content */}
                 <div className=" 
                 base: w-full flex z-0 justify-center items-center snap-start
-                sm: h-full
+                sm: h-auto
                 md: md:h-dvh 
                 lg: lg:h-dvh">
                     <div className=" 
-                      base: grid 
+                      base: grid gap-1 px-5 pt-[6rem]
                       sm: grid-cols-1
                       md: md:grid-cols-2 md:gap-3
                       lg: lg:grid-cols-2 lg:gap-4
