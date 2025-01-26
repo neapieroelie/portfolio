@@ -32,7 +32,7 @@ export default function Projects() {
 
     return (
         <>
-            <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory">
+            <div className="w-full h-screen overflow-y-auto">
                 {/* Header */}
                 {!isFooterVisible && (
                     <div className="fixed top-0 right-0 z-10 w-full">
@@ -41,7 +41,7 @@ export default function Projects() {
                 )}
                 {/* Main Content */}
                 <div className=" 
-                base: w-full flex z-0 justify-center items-center snap-start
+                base: w-full flex z-0 justify-center items-center
                 sm: h-auto
                 md: md:h-dvh 
                 lg: lg:h-dvh">
