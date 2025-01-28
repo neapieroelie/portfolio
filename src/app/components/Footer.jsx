@@ -59,7 +59,7 @@ export default function Footer() {
         lg: lg:gap-24
       ">
         {/* Navigation */}
-        <div className=" flex flex-col items-left gap-2 md:4 lg:4">
+        <div className=" flex flex-col items-left gap-2 md:4 lg:4 ">
           <h1 className="
             base: font-instrument text-neutral-800 tracking-tighter
             sm: text-5xl
@@ -89,14 +89,19 @@ export default function Footer() {
         </div>
 
         {/* Connect */}
-        <div className=" flex flex-col items-left gap-4">
+        <div className=" flex flex-col items-left gap-2 md:4 lg:4">
           <h1 className="
             base: font-instrument text-neutral-800 tracking-tighter
             sm: text-5xl
             md: md:text-7xl
             lg: lg:text-7xl
           ">Connect</h1>
-          <div className="body-text flex flex-col items-left gap-3">
+          <div className="
+            base: flex flex-col items-left font-robotoCondensed tracking-tighter text-neutral-800
+            sm: text-3xl 
+            md: md:text-4xl md:gap-3
+            lg: lg:text-4xl lg:gap-3
+          ">
             <a 
               href="https://www.linkedin.com/in/nea-pieroelie/"
               className="hover:underline transition duration-200"
