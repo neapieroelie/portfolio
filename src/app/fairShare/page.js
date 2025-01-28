@@ -20,15 +20,15 @@ export default function FairShare() {
     const projectImages = [
         "/fairshare_mockup_1.png",
         "/fairshare_mockup_2.png",
-        "/3_text_or_speech.png",
-        "/4_instant_feedback.png",
+        "/fairshare_mockup_3.png",
+        "/fairshare_mockup_4.png",
     ];
 
     useEffect(() => {
         const options = {
             root: null,
             rootMargin: "0px",
-            threshold: 0.6, // Trigger when 60% of the section is visible
+            threshold: 0.6,
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -56,19 +56,41 @@ export default function FairShare() {
         <>
             <div className="w-full h-dvh overflow-y-auto">
                 {/* Header */}
-                <div className="fixed top-0 right-0 z-20 w-full">
+                <div className="fixed z-10"> 
                     <Header />
                 </div>
 
                 {/* Main Content */}
-                <div className="w-full h-screen z-0 flex overflow-hidden">
+                <div className="
+                    base: relative w-full h-screen flex p-5 z-0
+                    sm: flex-col 
+                    md: flex-col
+                    lg: lg:flex-row overflow-hidden
+                ">
                     {/* Carousel */}
-                    <Carousel images={projectImages} />
-
-                    {/* Right Side (Text + Navigation) */}
-                    <div className="w-2/3 h-screen overflow-y-auto snap-y snap-mandatory relative">
+                    <div className="
+                        base: relative w-full h-auto 
+                        sm: mt-[70px]
+                        md: md:mt-[85px]
+                        lg: lg:mt-0
+                    ">
+                        <Carousel images={projectImages} />
+                    </div>
+                    
+                    {/* Text & Navigation */}
+                    <div className="
+                        base: overflow-y-auto snap-y snap-mandatory relative
+                        sm: w-full h-auto
+                        md: 
+                        lg: lg:w-2/3 lg:h-screen 
+                    ">
                         {/* Navigation */}
-                        <div className="sticky top-[64px] w-full bg-[#fdfcfc] z-10 p-2 pt-9 flex justify-around description-text">
+                        <div className="
+                            base: sticky top-0
+                            sm:
+                            md: md:top-0
+                            lg: lg:top-[65px]
+                             w-full bg-[#fdfcfc] z-10 p-2 pt-9 flex justify-around description-text">
                             <button
                                 onClick={() => scrollToSection(overviewRef)}
                                 className={`${
@@ -107,45 +129,72 @@ export default function FairShare() {
                         <div
                             ref={overviewRef}
                             data-section="overview"
-                            className="h-screen flex flex-col items-left justify-center snap-start gap-4"
+                            className="
+                                base: flex flex-col items-left justify-center snap-start gap-4
+                                sm: h-[550px]
+                                md: md:h-[400px]
+                                lg: lg:h-dvh"
                         >
                             <Image
-                                src="/onwardLogo.png"
+                                src="/FairShare_Logo.png"
                                 width={200}
                                 height={100}
-                                alt="Onward Logo"
-                                className="mx-7"
+                                alt="FairShare Logo"
+                                className=""
                             />
-                            <p className="mx-7 onward-body-text">
-                                Onward is an AI-powered web application designed to support immigrant nurses who are new to North America’s healthcare industry.
-                                It addresses cultural and language gaps while helping users build their confidence. With Onward, nurses can prepare for interviews
-                                through realistic mock interview simulations tailored to the healthcare sector, receive comprehensive feedback, and review past
-                                sessions to refine their responses and enhance their skills.
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]
+                            ">
+                                FairShare is a mobile application designed to help make splitting bills among groups easier.
+                                Users can simply scan receipts, split bills among friends, and even connect their bank accounts to the app, 
+                                allowing for immediate transactions, all in one seamless platform.
                             </p>
                         </div>
                         <div
                             ref={issueRef}
                             data-section="issue"
-                            className="h-screen flex flex-col items-left justify-center snap-start gap-4"
+                            className="
+                                base: flex flex-col items-left justify-center snap-start gap-4
+                                sm: h-[550px]
+                                md: md:h-[400px]
+                                lg: lg:h-dvh"
                         >
-                            <p className="mx-7 onward-body-text">
-                            We chose to focus on immigrants because many of our team members, either personally or through family and friends, understand the challenges they face when transitioning to a new professional environment. These include cultural and language barriers, biases against international qualifications, and the emotional strain of starting over.
-                            <br/><br/>Through surveys and secondary research, we found these challenges were especially pronounced in healthcare:
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]
+                            ">
+                            We found that many people struggle with managing shared expenses in group settings.
+                            These include difficulties in calculating exact shares, ensuring everyone contributes fairly, and managing payments across different platforms.
+                            <br/><br/>Through surveys and secondary research, we identified that these challenges were even more significant for younger adults and groups on a tight budget:
                             <li>
-                                44% of internationally educated healthcare workers are overqualified but often overlooked.
+                            50% of respondents expressed discomfort with manually tracking shared expenses due to errors and time consumption.
                             </li>
                             <li>
-                                Over 25% of immigrants experience severe interview anxiety, limiting their ability to showcase their skills.
+                            7 out of 10 respondents stated they often forget to track or split bills, leading to misunderstandings or unpaid balances.
                             </li>
-                            <br/>This inspired us to create a solution tailored to immigrant nurses' needs, helping them overcome these barriers.
+                            <br/>This inspired us to create FairShare, a solution designed to simplify and streamline the process of splitting bills, ensuring fair and transparent sharing of group expenses.
                             </p>
                         </div>
                         <div
                             ref={actionRef}
                             data-section="action"
-                            className="h-screen flex flex-col items-left justify-center snap-start gap-4"
+                            className="
+                                base: flex flex-col items-left justify-center snap-start gap-4
+                                sm: h-[550px]
+                                md: md:h-[400px]
+                                lg: lg:h-dvh"
                         >
-                            <p className="mx-7 onward-body-text">
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]
+                            ">
                             We identified a gap in resources for nurses to practice their interview skills, particularly those tailored to the immigrant community. 
                             
                             <br/><br/>To address this, we developed Onward, an application where nurses can:
@@ -167,9 +216,20 @@ export default function FairShare() {
                         <div
                             ref={howRef}
                             data-section="how"
-                            className="h-screen flex items-center justify-center snap-start"
+                            className="
+                                base: flex flex-col items-left justify-center snap-start gap-4
+                                sm: h-[550px]
+                                md: md:h-[400px]
+                                lg: lg:h-dvh"
                         >
-                            <p></p>
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+
+                            </p>
                         </div>
                     </div>
                 </div>

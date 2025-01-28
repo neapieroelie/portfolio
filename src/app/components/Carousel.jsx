@@ -17,7 +17,7 @@ export default function Carousel({ images = [] }) {
   };
 
   return (
-    <div className="relative w-full h-auto lg:h-screen flex flex-col items-center justify-center">
+    <div className="relative w-full h-auto lg:h-screen flex flex-col items-center justify-center gap-2">
         {/* Image Container */}
             <div className="flex justify-center items-center">
                 <Image
@@ -33,11 +33,15 @@ export default function Carousel({ images = [] }) {
         {/* Previous Button */}
         <button
             onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/15 text-white p-2 rounded-full hover:bg-black/70 transition"
+            className="
+            base: absolute top-1/2 -translate-y-1/2 bg-black/15 text-white p-2 rounded-full hover:bg-black/70 transition
+            sm: left-2
+            md: md:left-4
+            lg: lg:left-12"
         >
             <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-3 h-3"
+            className="w-2 h-2 md:w-3 md:h-3 lg:w-3 lg:h-3"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -54,11 +58,14 @@ export default function Carousel({ images = [] }) {
         {/* Next Button */}
         <button
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/15 text-white p-2 rounded-full hover:bg-black/25 transition"
+            className="base: absolute top-1/2 -translate-y-1/2 bg-black/15 text-white p-2 rounded-full hover:bg-black/70 transition
+            sm: right-2
+            md: md:right-4
+            lg: lg:right-12"
         >
             <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-3 h-3"
+            className="w-2 h-2 md:w-3 md:h-3 lg:w-3 lg:h-3"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
