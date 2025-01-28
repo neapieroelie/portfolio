@@ -89,7 +89,7 @@ export default function Onward() {
                             base: sticky top-0
                             sm:
                             md: md:top-0
-                            lg: lg:top-[65px]
+                            lg: lg:top-[55px]
                              w-full bg-[#fdfcfc] z-10 p-2 pt-9 flex justify-around description-text">
                             <button
                                 onClick={() => scrollToSection(overviewRef)}
@@ -228,7 +228,7 @@ export default function Onward() {
                                 md: md:text-[14px]
                                 lg: lg:text-[16px]"
                             >
-
+                                
                             </p>
                         </div>
                     </div>
