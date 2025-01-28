@@ -18,10 +18,10 @@ export default function Onward() {
     };
 
     const projectImages = [
-        "/1_upload_resume_and_job_posting.png",
-        "/2_tailored_interview_questions.png",
-        "/3_text_or_speech.png",
-        "/4_instant_feedback.png",
+        "/onward_mockup_1.png",
+        "/onward_mockup_2.png",
+        "/onward_mockup_3.png",
+        "/onward_mockup_4.png",
     ];
 
     useEffect(() => {
