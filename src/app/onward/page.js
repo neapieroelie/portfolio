@@ -5,7 +5,7 @@ import Carousel from "../components/Carousel";
 import Header from "../components/Header";
 import Image from "next/image";
 
-export default function SnappingPage() {
+export default function Onward() {
     const overviewRef = useRef(null);
     const issueRef = useRef(null);
     const actionRef = useRef(null);
@@ -28,7 +28,7 @@ export default function SnappingPage() {
         const options = {
             root: null,
             rootMargin: "0px",
-            threshold: 0.6, // Trigger when 60% of the section is visible
+            threshold: 0.6,
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -56,19 +56,41 @@ export default function SnappingPage() {
         <>
             <div className="w-full h-dvh overflow-y-auto">
                 {/* Header */}
-                <div className="fixed top-0 right-0 z-20 w-full">
+                <div className="fixed z-10"> 
                     <Header />
                 </div>
 
                 {/* Main Content */}
-                <div className="w-full h-screen z-0 flex overflow-hidden">
+                <div className="
+                    base: relative w-full h-screen flex p-5 z-0
+                    sm: flex-col 
+                    md: flex-col
+                    lg: lg:flex-row overflow-hidden
+                ">
                     {/* Carousel */}
-                    <Carousel images={projectImages} />
-
-                    {/* Right Side (Text + Navigation) */}
-                    <div className="w-2/3 h-screen overflow-y-auto snap-y snap-mandatory relative">
+                    <div className="
+                        base: relative w-full h-auto 
+                        sm: mt-[70px]
+                        md: md:mt-[85px]
+                        lg: lg:mt-0
+                    ">
+                        <Carousel images={projectImages} />
+                    </div>
+                    
+                    {/* Text & Navigation */}
+                    <div className="
+                        base: overflow-y-auto snap-y snap-mandatory relative
+                        sm: w-full h-auto
+                        md: 
+                        lg: lg:w-2/3 lg:h-screen 
+                    ">
                         {/* Navigation */}
-                        <div className="sticky top-[64px] w-full bg-[#fdfcfc] z-10 p-2 pt-9 flex justify-around description-text">
+                        <div className="
+                            base: sticky top-0
+                            sm:
+                            md: md:top-0
+                            lg: lg:top-[65px]
+                             w-full bg-[#fdfcfc] z-10 p-2 pt-9 flex justify-around description-text">
                             <button
                                 onClick={() => scrollToSection(overviewRef)}
                                 className={`${
@@ -107,16 +129,25 @@ export default function SnappingPage() {
                         <div
                             ref={overviewRef}
                             data-section="overview"
-                            className="h-screen flex flex-col items-left justify-center snap-start gap-4"
+                            className="
+                                base: flex flex-col items-left justify-center snap-start gap-4
+                                sm: h-[550px]
+                                md: md:h-[400px]
+                                lg: lg:h-dvh"
                         >
                             <Image
                                 src="/onwardLogo.png"
                                 width={200}
                                 height={100}
                                 alt="Onward Logo"
-                                className="mx-7"
+                                className=""
                             />
-                            <p className="mx-7 onward-body-text">
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]
+                            ">
                                 Onward is an AI-powered web application designed to support immigrant nurses who are new to North America’s healthcare industry.
                                 It addresses cultural and language gaps while helping users build their confidence. With Onward, nurses can prepare for interviews
                                 through realistic mock interview simulations tailored to the healthcare sector, receive comprehensive feedback, and review past
@@ -126,9 +157,18 @@ export default function SnappingPage() {
                         <div
                             ref={issueRef}
                             data-section="issue"
-                            className="h-screen flex flex-col items-left justify-center snap-start gap-4"
+                            className="
+                                base: flex flex-col items-left justify-center snap-start gap-4
+                                sm: h-[550px]
+                                md: md:h-[400px]
+                                lg: lg:h-dvh"
                         >
-                            <p className="mx-7 onward-body-text">
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]
+                            ">
                             We chose to focus on immigrants because many of our team members, either personally or through family and friends, understand the challenges they face when transitioning to a new professional environment. These include cultural and language barriers, biases against international qualifications, and the emotional strain of starting over.
                             <br/><br/>Through surveys and secondary research, we found these challenges were especially pronounced in healthcare:
                             <li>
@@ -143,9 +183,18 @@ export default function SnappingPage() {
                         <div
                             ref={actionRef}
                             data-section="action"
-                            className="h-screen flex flex-col items-left justify-center snap-start gap-4"
+                            className="
+                                base: flex flex-col items-left justify-center snap-start gap-4
+                                sm: h-[550px]
+                                md: md:h-[400px]
+                                lg: lg:h-dvh"
                         >
-                            <p className="mx-7 onward-body-text">
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]
+                            ">
                             We identified a gap in resources for nurses to practice their interview skills, particularly those tailored to the immigrant community. 
                             
                             <br/><br/>To address this, we developed Onward, an application where nurses can:
@@ -167,9 +216,20 @@ export default function SnappingPage() {
                         <div
                             ref={howRef}
                             data-section="how"
-                            className="h-screen flex items-center justify-center snap-start"
+                            className="
+                                base: flex flex-col items-left justify-center snap-start gap-4
+                                sm: h-[550px]
+                                md: md:h-[400px]
+                                lg: lg:h-dvh"
                         >
-                            <p></p>
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+
+                            </p>
                         </div>
                     </div>
                 </div>
