@@ -1,3 +1,5 @@
+"use client";
+
 import MenuButton from "./MenuButton";
 import Image from "next/image";
 

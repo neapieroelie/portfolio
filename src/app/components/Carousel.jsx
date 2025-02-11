@@ -1,34 +1,29 @@
+"use client";
+
 import { useState } from "react";
 import Image from "next/image";
 
-export default function Carousel({ images = [] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+export default function Carousel({ images = [], currentIndex, setCurrentIndex }) {
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
     <div className="relative w-full h-auto lg:h-screen flex flex-col items-center justify-center gap-2">
         {/* Image Container */}
-            <div className="flex justify-center items-center">
-                <Image
-                    src={images[currentIndex]}
-                    alt={`Slide ${currentIndex + 1}`}
-                    width={750}
-                    height={300}
-                    objectFit="contain"
-                    className=""
-                />
-            </div>
+        <div className="flex justify-center items-center">
+            <Image
+                src={images[currentIndex]}
+                alt={`Slide ${currentIndex + 1}`}
+                width={750}
+                height={300}
+                objectFit="contain"
+            />
+        </div>
 
         {/* Previous Button */}
         <button

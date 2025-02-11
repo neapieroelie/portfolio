@@ -12,6 +12,8 @@ export default function Onward() {
     const howRef = useRef(null);
 
     const [activeSection, setActiveSection] = useState("overview");
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const lastSectionRef = useRef(null); // Track the last section to avoid duplicate triggers
 
     const scrollToSection = (ref) => {
         ref.current.scrollIntoView({ behavior: "smooth" });
@@ -25,22 +27,31 @@ export default function Onward() {
     ];
 
     useEffect(() => {
+        const sections = [overviewRef, issueRef, actionRef, howRef];
+
         const options = {
             root: null,
             rootMargin: "0px",
-            threshold: 0.6,
+            threshold: 0.6, // Ensures we trigger when the section is mostly visible
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     const sectionId = entry.target.getAttribute("data-section");
-                    setActiveSection(sectionId);
+
+                    // Prevent duplicate triggers when re-entering the same section
+                    if (lastSectionRef.current !== sectionId) {
+                        lastSectionRef.current = sectionId;
+                        setActiveSection(sectionId);
+
+                        // Change the Carousel image (only when section changes)
+                        setCurrentIndex((prevIndex) => (prevIndex + 1) % projectImages.length);
+                    }
                 }
             });
         }, options);
 
-        const sections = [overviewRef, issueRef, actionRef, howRef];
         sections.forEach((section) => {
             if (section.current) observer.observe(section.current);
         });
@@ -74,10 +85,10 @@ export default function Onward() {
                         md: md:mt-[85px]
                         lg: lg:mt-0
                     ">
-                        <Carousel images={projectImages} />
+                        <Carousel images={projectImages} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
                     </div>
-                    
-                    {/* Text & Navigation */}
+
+                    {/* Sections */}
                     <div className="
                         base: overflow-y-auto snap-y snap-mandatory relative
                         sm: w-full h-auto
@@ -89,147 +100,260 @@ export default function Onward() {
                             base: sticky top-0
                             sm:
                             md: md:top-0
-                            lg: lg:top-[55px]
-                             w-full bg-[#fdfcfc] z-10 p-2 pt-9 flex justify-around description-text">
+                            lg: lg:top-[50px]
+                            w-full bg-[#fdfcfc] z-10 p-2 pt-9 flex justify-around description-text">
                             <button
                                 onClick={() => scrollToSection(overviewRef)}
-                                className={`${
-                                    activeSection === "overview" ? "underline" : ""
-                                } hover:underline`}
+                                className={`${activeSection === "overview" ? "underline" : ""} hover:underline`}
                             >
-                                OVERVIEW
+                                SITUATION
                             </button>
                             <button
                                 onClick={() => scrollToSection(issueRef)}
-                                className={`${
-                                    activeSection === "issue" ? "underline" : ""
-                                } hover:underline`}
+                                className={`${activeSection === "issue" ? "underline" : ""} hover:underline`}
                             >
-                                ISSUE
+                                TASK
                             </button>
                             <button
                                 onClick={() => scrollToSection(actionRef)}
-                                className={`${
-                                    activeSection === "action" ? "underline" : ""
-                                } hover:underline`}
+                                className={`${activeSection === "action" ? "underline" : ""} hover:underline`}
                             >
                                 ACTION
                             </button>
                             <button
                                 onClick={() => scrollToSection(howRef)}
-                                className={`${
-                                    activeSection === "how" ? "underline " : ""
-                                } hover:underline`}
+                                className={`${activeSection === "how" ? "underline" : ""} hover:underline`}
                             >
-                                HOW
+                                RESULT
                             </button>
                         </div>
 
                         {/* Sections */}
-                        <div
+                        <div 
                             ref={overviewRef}
                             data-section="overview"
                             className="
-                                base: flex flex-col items-left justify-center snap-start gap-4
+                                base: flex flex-col items-left justify-center snap-start gap-4 p-5 text-justify
                                 sm: h-[550px]
                                 md: md:h-[400px]
                                 lg: lg:h-dvh"
                         >
-                            <Image
-                                src="/onwardLogo.png"
-                                width={200}
-                                height={100}
+                            <Image 
+                                src="/onwardLogo.png" 
+                                width={200} height={100} 
                                 alt="Onward Logo"
                                 className=""
                             />
-                            <p className="
-                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
-                                sm: text-[12px]
-                                md: md:text-[14px]
-                                lg: lg:text-[16px]
-                            ">
-                                Onward is an AI-powered web application designed to support immigrant nurses who are new to North America’s healthcare industry.
-                                It addresses cultural and language gaps while helping users build their confidence. With Onward, nurses can prepare for interviews
-                                through realistic mock interview simulations tailored to the healthcare sector, receive comprehensive feedback, and review past
-                                sessions to refine their responses and enhance their skills.
-                            </p>
-                        </div>
-                        <div
-                            ref={issueRef}
-                            data-section="issue"
-                            className="
-                                base: flex flex-col items-left justify-center snap-start gap-4
-                                sm: h-[550px]
-                                md: md:h-[400px]
-                                lg: lg:h-dvh"
-                        >
-                            <p className="
-                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
-                                sm: text-[12px]
-                                md: md:text-[14px]
-                                lg: lg:text-[16px]
-                            ">
-                            We chose to focus on immigrants because many of our team members, either personally or through family and friends, understand the challenges they face when transitioning to a new professional environment. These include cultural and language barriers, biases against international qualifications, and the emotional strain of starting over.
-                            <br/><br/>Through surveys and secondary research, we found these challenges were especially pronounced in healthcare:
-                            <li>
-                                44% of internationally educated healthcare workers are overqualified but often overlooked.
-                            </li>
-                            <li>
-                                Over 25% of immigrants experience severe interview anxiety, limiting their ability to showcase their skills.
-                            </li>
-                            <br/>This inspired us to create a solution tailored to immigrant nurses' needs, helping them overcome these barriers.
-                            </p>
-                        </div>
-                        <div
-                            ref={actionRef}
-                            data-section="action"
-                            className="
-                                base: flex flex-col items-left justify-center snap-start gap-4
-                                sm: h-[550px]
-                                md: md:h-[400px]
-                                lg: lg:h-dvh"
-                        >
-                            <p className="
-                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
-                                sm: text-[12px]
-                                md: md:text-[14px]
-                                lg: lg:text-[16px]
-                            ">
-                            We identified a gap in resources for nurses to practice their interview skills, particularly those tailored to the immigrant community. 
-                            
-                            <br/><br/>To address this, we developed Onward, an application where nurses can:
-                            <li>
-                                Practice responses tailored to their job postings and resumes.
-                            </li>
-                            <li>
-                                Use the Mock Interview feature, which replicates real interviews with randomized questions 
-                                to test their readiness under realistic conditions.
-                            </li>
-                            <li>
-                                Receive instant feedback analyzing clarity, relevance, and language use, 
-                                with suggestions to improve answer structure, such as using the STAR method.
-                            </li>
-                            <br/>These features empower users to communicate more confidently and effectively, 
-                            ensuring they are well-prepared for real-world interviews.
-                            </p>
-                        </div>
-                        <div
-                            ref={howRef}
-                            data-section="how"
-                            className="
-                                base: flex flex-col items-left justify-center snap-start gap-4
-                                sm: h-[550px]
-                                md: md:h-[400px]
-                                lg: lg:h-dvh"
-                        >
+                            <h1 className="
+                                base: font-plusJakartaSans text-gray-700 font-bold leading-normal tracking-tight
+                                sm: text-[16px]
+                                md: md:text-[18px]
+                                lg: lg:text-[24px]"
+                            >The Challenge</h1>
                             <p className="
                                 base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
                                 sm: text-[12px]
                                 md: md:text-[14px]
                                 lg: lg:text-[16px]"
                             >
-                                
+                                We built Onward from the ground up to address the cultural and language barriers, biases against international 
+                                qualifications, and interview anxiety immigrant nurses face when transitioniing into North American job market. Research revealed:
                             </p>
+                            <ul className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-6
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                <li>44% of internationally educated healthcare workers are overqualified but often overlooked.</li>
+                                <li>Over 25% of immigrants experience severe interview anxiety, limiting their ability to showcase their skills.</li>
+                            </ul>
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                Recognizing this gap, we created Onward to provide realistic mock interviews, AI-driven feedback, and structured practice 
+                                tools tailored to healthcare professionals.
+                            </p>
+                        </div>
+                        <div 
+                            ref={issueRef}
+                            data-section="issue"
+                            className="
+                            base: flex flex-col items-left justify-center snap-start gap-4 p-5 text-justify
+                            sm: h-[550px]
+                            md: md:h-[400px]
+                            lg: lg:h-dvh"
+                        >
+                            <h1 className="
+                                base: font-plusJakartaSans text-gray-700 font-bold leading-normal tracking-tight
+                                sm: text-[16px]
+                                md: md:text-[18px]
+                                lg: lg:text-[24px]"
+                            >
+                                Our Goal
+                            </h1>
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                To create a product that help immigrant nurses overcome job market challenges through:
+                            </p>
+                            <ol className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-decimal list-outside pl-6
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                <li>Equipping immigrant nurses with the tools needed to practice and refine their interview skills</li>
+                                <li>Simulating real-world conditions to help nurses gain confidence and familiarity</li>
+                                <li>Providing structured, actionable feedback to improve their responses.</li>
+                            </ol>
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                As the UI/UX designer, I was responsible for ensuring the app was visually engaging, highly usable, 
+                                and research-driven to support our mission.
+                            </p>
+                        </div>
+                        <div 
+                            ref={actionRef} 
+                            data-section="action" 
+                            className="
+                                base: flex flex-col items-left justify-center snap-start gap-4 p-5 text-justify
+                                sm: h-[550px]
+                                md: md:h-[400px]
+                                lg: lg:h-dvh"
+                            >
+                            <h1 className="
+                                base: font-plusJakartaSans text-gray-700 font-bold leading-normal tracking-tight
+                                sm: text-[16px]
+                                md: md:text-[18px]
+                                lg: lg:text-[24px]"
+                            >
+                                My Role
+                            </h1>
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                To achieve these goals, I contributed in the following key areas:                                
+                            </p>
+                            <ol className="
+                                base: font-plusJakartaSans text-gray-700 font-semibold leading-normal tracking-tight list-decimal list-outside pl-6
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                <li>Branding and Visual Identity:</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li>Designed the logo, typography, and color schemes to define Onwards unique visual identity.</li>
+                                    </ul>
+                                <li>User research & Problem Identification</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li> Conducted interviews, surveys, and competitor analysis to identify user pain points and map their job-seeking journey</li>
+                                    </ul>
+                                <li>Wireframing, Prototyping & User Testing</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li>Created low-fidelity wireframes and high-fidelity Figma prototypes, refining UX through iterative testing.</li>
+                                        <li>Ran user testing sessions, iterated based on feedback, and refines the final UI for better engagement.</li>
+                                    </ul>
+                                <li>Marketing & Outreach</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li>Designed social media assets and a short promotional video to showcase Onward.</li>
+                                    </ul>
+                            </ol>
+                        </div>
+                        <div 
+                            ref={howRef} 
+                            data-section="how" 
+                            className="
+                                base: flex flex-col items-left justify-center snap-start gap-4
+                                sm: h-[550px]
+                                md: md:h-[400px]
+                                lg: lg:h-dvh"
+                        >
+                            <h1 className="
+                                base: font-plusJakartaSans text-gray-700 font-bold leading-normal tracking-tight
+                                sm: text-[16px]
+                                md: md:text-[18px]
+                                lg: lg:text-[24px]"
+                            >
+                                The Impact
+                            </h1>
+                            <p className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                Onward successfully addressed a critical gap for immigrant nurses through thoughtful research, 
+                                design, and usability testing. Key outcomes included:
+                            </p>
+                            <ol className="
+                                base: font-plusJakartaSans text-gray-700 font-semibold leading-normal tracking-tight list-decimal list-outside pl-6
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                <li>Positive user feedback:</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li>During usability testing, 85% of participants reported that Onward’s mock interview feature helped them feel more prepared.</li>
+                                    </ul>
+                                <li>Effective Design Iterations</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li>Based on the testing results, we refined our UI and improved user flow, making the platform more intuitive and engaging.</li>
+                                    </ul>
+                                <li>Successful Presentation and Recognition</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li>Our project was well-received during our final presentation, with the stakeholders highlighting 
+                                            the strong foundation, thoughtful UX design, and potential real-world impact.</li>
+                                    </ul>
+                            </ol>
                         </div>
                     </div>
                 </div>

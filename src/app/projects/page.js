@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Header from "../components/Header"
-import PageNotDone from "../components/PageNotDone"
-import Image from "next/image"
 import ProjectComponent from "../components/ProjectComponent"
 import Footer from "../components/Footer"
 
@@ -68,7 +66,7 @@ export default function Projects() {
                             image="/safecycle_front.png"
                             number="3."
                             title="SafeCycle App"
-                            link="#"
+                            link="safecycle"
                         />
                     </div>
                 </div>

@@ -1,3 +1,5 @@
+"use client";
+
 export default function PageNotDone({ title }) {
     return (
       <div

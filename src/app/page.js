@@ -104,7 +104,7 @@ export default function Home() {
           width={900}
           height={100}
           bouncingText="Next Project"
-          link="#"
+          link="/safecycle"
         />
         {/* Footer */}
         <div ref={footerRef}>
