@@ -52,14 +52,14 @@ export default function Resume() {
           {/* Thumbnail */}
           <div onClick={handleImageClick} className="cursor-zoom-in">
             <Image
-              src="/resume_updated_2025.png"
+              src="/NeaPieroelieResume2025.png"
               alt="My Resume"
               width={300}
               height={500}
               className="
                 base: object-contain transition-transform duration-300 hover:scale-105 drop-shadow-xl
                 md:w-[400px] md:h-[600px]
-                lg:w-[500px] lg:h-[700px]"
+                lg:w-[400px] lg:h-[600px]"
             />
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function Resume() {
               onClick={(e) => e.stopPropagation()}
             >
               <Image
-                src="/resume_updated_2025.png"
+                src="/NeaPieroelieResume2025.png"
                 alt="Zoomed Resume"
                 width={1000}
                 height={1400}
