@@ -13,7 +13,7 @@ export default function Onward() {
 
     const [activeSection, setActiveSection] = useState("overview");
     const [currentIndex, setCurrentIndex] = useState(0);
-    const lastSectionRef = useRef(null); // Track the last section to avoid duplicate triggers
+    const lastSectionRef = useRef(null);
 
     const scrollToSection = (ref) => {
         ref.current.scrollIntoView({ behavior: "smooth" });
@@ -32,7 +32,7 @@ export default function Onward() {
         const options = {
             root: null,
             rootMargin: "0px",
-            threshold: 0.6, // Ensures we trigger when the section is mostly visible
+            threshold: 0.6,
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -40,12 +40,9 @@ export default function Onward() {
                 if (entry.isIntersecting) {
                     const sectionId = entry.target.getAttribute("data-section");
 
-                    // Prevent duplicate triggers when re-entering the same section
                     if (lastSectionRef.current !== sectionId) {
                         lastSectionRef.current = sectionId;
                         setActiveSection(sectionId);
-
-                        // Change the Carousel image (only when section changes)
                         setCurrentIndex((prevIndex) => (prevIndex + 1) % projectImages.length);
                     }
                 }

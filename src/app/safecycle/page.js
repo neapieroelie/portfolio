@@ -43,7 +43,6 @@ export default function SafeCycle() {
                     if (lastSectionRef.current !== sectionId) {
                         lastSectionRef.current = sectionId;
                         setActiveSection(sectionId);
-
                         setCurrentIndex((prevIndex) => (prevIndex + 1) % projectImages.length);
                     }
                 }
@@ -98,19 +97,19 @@ export default function SafeCycle() {
                             base: sticky top-0
                             sm:
                             md: md:top-0
-                            lg: lg:top-[55px]
+                            lg: lg:top-[50px]
                             w-full bg-[#fdfcfc] z-10 p-2 pt-9 flex justify-around description-text">
                             <button
                                 onClick={() => scrollToSection(overviewRef)}
                                 className={`${activeSection === "overview" ? "underline" : ""} hover:underline`}
                             >
-                                OVERVIEW
+                                SITUATION
                             </button>
                             <button
                                 onClick={() => scrollToSection(issueRef)}
                                 className={`${activeSection === "issue" ? "underline" : ""} hover:underline`}
                             >
-                                ISSUE
+                                TASK
                             </button>
                             <button
                                 onClick={() => scrollToSection(actionRef)}
@@ -122,7 +121,7 @@ export default function SafeCycle() {
                                 onClick={() => scrollToSection(howRef)}
                                 className={`${activeSection === "how" ? "underline" : ""} hover:underline`}
                             >
-                                HOW
+                                RESULT
                             </button>
                         </div>
 
@@ -131,7 +130,7 @@ export default function SafeCycle() {
                             ref={overviewRef}
                             data-section="overview"
                             className="
-                                base: flex flex-col items-left justify-center snap-start gap-4
+                                base: flex flex-col items-left justify-center snap-start gap-4 p-5 text-justify
                                 sm: h-[550px]
                                 md: md:h-[400px]
                                 lg: lg:h-dvh"
@@ -142,75 +141,129 @@ export default function SafeCycle() {
                                 alt="Onward Logo"
                                 className=""
                             />
+                            <h1 className="
+                                base: font-plusJakartaSans text-gray-700 font-bold leading-normal tracking-tight
+                                sm: text-[16px]
+                                md: md:text-[18px]
+                                lg: lg:text-[24px]"
+                            >The Challenge</h1>
                             <p className="
                                 base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
                                 sm: text-[12px]
                                 md: md:text-[14px]
                                 lg: lg:text-[16px]"
                             >
-                                Onward is an AI-powered web application designed to support immigrant nurses who are new to North America’s healthcare industry.
-                                It addresses cultural and language gaps while helping users build their confidence. With Onward, nurses can prepare for interviews
-                                through realistic mock interview simulations tailored to the healthcare sector, receive comprehensive feedback, and review past
-                                sessions to refine their responses and enhance their skills.
+                                Urban cyclists face random hazards, navigation difficulties, 
+                                and safety concerns when riding in cities. SafeCycle was designed to:
                             </p>
+                            <ul className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-6
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                <li>Track cyclists’ progress in real-time.</li>
+                                <li>Provide hazard alerts for safer navigation.</li>
+                                <li>Offer cycling-friendly routes with integrated mapping.</li>
+                            </ul>
                         </div>
                         <div 
                             ref={issueRef}
                             data-section="issue"
                             className="
-                            base: flex flex-col items-left justify-center snap-start gap-4
+                            base: flex flex-col items-left justify-center snap-start gap-4 p-5 text-justify
                             sm: h-[550px]
                             md: md:h-[400px]
                             lg: lg:h-dvh"
                         >
+                            <h1 className="
+                                base: font-plusJakartaSans text-gray-700 font-bold leading-normal tracking-tight
+                                sm: text-[16px]
+                                md: md:text-[18px]
+                                lg: lg:text-[24px]"
+                            >
+                                Our Goal
+                            </h1>
                             <p className="
                                 base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
                                 sm: text-[12px]
                                 md: md:text-[14px]
                                 lg: lg:text-[16px]"
                             >
-                                We chose to focus on immigrants because many of our team members, either personally or through family and friends, understand the challenges they face when transitioning to a new professional environment. These include cultural and language barriers, biases against international qualifications, and the emotional strain of starting over.
-                                <br/><br/>Through surveys and secondary research, we found these challenges were especially pronounced in healthcare:
-                                <li>
-                                    44% of internationally educated healthcare workers are overqualified but often overlooked.
-                                </li>
-                                <li>
-                                    Over 25% of immigrants experience severe interview anxiety, limiting their ability to showcase their skills.
-                                </li>
-                                <br/>This inspired us to create a solution tailored to immigrant nurses' needs, helping them overcome these barriers.
+                                Our mission was to create a safety-focused mapping app for cyclists and pedestrians by integrating 
+                                real-time tracking, hazard detection, and navigation features.
+                                <br/><br/>As the UI/UX Designer & Developer, I worked on both designing and coding the application, 
+                                bridging the gap between user experience and functionality.
                             </p>
                         </div>
                         <div 
                             ref={actionRef} 
                             data-section="action" 
                             className="
-                                base: flex flex-col items-left justify-center snap-start gap-4
+                                base: flex flex-col items-left justify-center snap-start gap-4 p-5 text-justify
                                 sm: h-[550px]
                                 md: md:h-[400px]
                                 lg: lg:h-dvh"
                             >
+                            <h1 className="
+                                base: font-plusJakartaSans text-gray-700 font-bold leading-normal tracking-tight
+                                sm: text-[16px]
+                                md: md:text-[18px]
+                                lg: lg:text-[24px]"
+                            >
+                                My Role
+                            </h1>
                             <p className="
                                 base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
                                 sm: text-[12px]
                                 md: md:text-[14px]
                                 lg: lg:text-[16px]"
                             >
-                                We identified a gap in resources for nurses to practice their interview skills, particularly those tailored to the immigrant community. 
-                                <br/><br/>To address this, we developed Onward, an application where nurses can:
-                                <li>
-                                    Practice responses tailored to their job postings and resumes.
-                                </li>
-                                <li>
-                                    Use the Mock Interview feature, which replicates real interviews with randomized questions 
-                                    to test their readiness under realistic conditions.
-                                </li>
-                                <li>
-                                    Receive instant feedback analyzing clarity, relevance, and language use, 
-                                    with suggestions to improve answer structure, such as using the STAR method.
-                                </li>
-                                <br/>These features empower users to communicate more confidently and effectively, 
-                                ensuring they are well-prepared for real-world interviews.
+                                I played a crucial role in designing, coding, and problem-solving throughout the project.                   
                             </p>
+                            <ol className="
+                                base: font-plusJakartaSans text-gray-700 font-semibold leading-normal tracking-tight list-decimal list-outside pl-6
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
+                            >
+                                <li>UI/UX Design & Branding</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li>Designed a cohesive brand identity, style guide, and UI components for a clean, intuitive experience.</li>
+                                    </ul>
+                                <li>Wireframing & Prototyping</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li>Created low/high-fidelity Figma prototypes, refining based on user feedback.</li>
+                                    </ul>
+                                <li>Front-End Development</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li>Developed app functionalities using JavaScript, translating designs into responsive code.</li>
+                                    </ul>
+                                <li>API Integration</li>
+                                    <ul className="
+                                        base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-4
+                                        sm: text-[12px]
+                                        md: md:text-[14px]
+                                        lg: lg:text-[16px]"
+                                    >
+                                        <li>Integrated Google Maps API for real-time navigation and cyclist tracking.</li>
+                                    </ul>
+                            </ol>
                         </div>
                         <div 
                             ref={howRef} 
@@ -220,15 +273,25 @@ export default function SafeCycle() {
                                 sm: h-[550px]
                                 md: md:h-[400px]
                                 lg: lg:h-dvh"
+                        >
+                            <h1 className="
+                                base: font-plusJakartaSans text-gray-700 font-bold leading-normal tracking-tight
+                                sm: text-[16px]
+                                md: md:text-[18px]
+                                lg: lg:text-[24px]"
                             >
-                            <p className="
-                            base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight
-                            sm: text-[12px]
-                            md: md:text-[14px]
-                            lg: lg:text-[16px]"
+                                The Impact
+                            </h1>
+                            <ol className="
+                                base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-decimal list-outside pl-6
+                                sm: text-[12px]
+                                md: md:text-[14px]
+                                lg: lg:text-[16px]"
                             >
-                                How
-                            </p>
+                                <li>Successfully built core features for hazard detection, cyclist tracking, and navigation.</li>
+                                <li>Gained hands-on experience in APIs, animations, and debugging complex issues.</li>
+                                <li>SafeCycle is now positioned for further feature expansion and usability testing.</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
