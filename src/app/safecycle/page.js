@@ -135,12 +135,16 @@ export default function SafeCycle() {
                                 md: md:h-[400px]
                                 lg: lg:h-dvh"
                         >
+                            <a  href="https://safecycle.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer">
                             <Image 
                                 src="/safecycleLogo.png" 
                                 width={200} height={100} 
                                 alt="Onward Logo"
                                 className=""
                             />
+                            </a>
                             <h1 className="
                                 base: font-plusJakartaSans text-gray-700 font-bold leading-normal tracking-tight
                                 sm: text-[16px]
@@ -264,12 +268,26 @@ export default function SafeCycle() {
                                         <li>Integrated Google Maps API for real-time navigation and cyclist tracking.</li>
                                     </ul>
                             </ol>
+                            <a  href="https://www.figma.com/design/h4Dn238BRq5EfY9PE55fLc/SafeCycle-App?node-id=4-42&t=10KQywqNpZTu4ULh-1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className="
+                                    base: font-plusJakartaSans text-blue-800 font-medium leading-normal tracking-tight hover:text-blue-400
+                                    sm: text-[12px]
+                                    md: md:text-[14px]
+                                    lg: lg:text-[16px]"
+                                >
+                                    Figma Link                   
+                                </p>
+                            </a>
+                            
                         </div>
                         <div 
                             ref={howRef} 
                             data-section="how" 
                             className="
-                                base: flex flex-col items-left justify-center snap-start gap-4
+                                base: flex flex-col items-left justify-center snap-start gap-4 
                                 sm: h-[550px]
                                 md: md:h-[400px]
                                 lg: lg:h-dvh"
@@ -288,10 +306,23 @@ export default function SafeCycle() {
                                 md: md:text-[14px]
                                 lg: lg:text-[16px]"
                             >
-                                <li>Successfully built core features for hazard detection, cyclist tracking, and navigation.</li>
+                                <li>I got to learn how to adapt UI/UX designs to real-world development constraints and timelines..</li>
                                 <li>Gained hands-on experience in APIs, animations, and debugging complex issues.</li>
-                                <li>SafeCycle is now positioned for further feature expansion and usability testing.</li>
+                                <li>The final product was mostly static, as the API couldn’t fully support our intended features.</li>
                             </ol>
+                            <a  href="https://safecycle.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className="
+                                    base: font-plusJakartaSans text-blue-800 font-medium leading-normal tracking-tight hover:text-blue-400
+                                    sm: text-[12px]
+                                    md: md:text-[14px]
+                                    lg: lg:text-[16px]"
+                                >
+                                    SafeCycle App Demo                  
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>
