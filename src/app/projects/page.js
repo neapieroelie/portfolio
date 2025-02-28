@@ -52,19 +52,16 @@ export default function Projects() {
                     ">
                         <ProjectComponent 
                             image="/onward_front.png"
-                            number="1."
                             title="Onward Web App"
                             link="/onward"
                         />
                         <ProjectComponent 
                             image="/fairshare_front.png"
-                            number="2."
                             title="FairShare App"
                             link="fairShare"
                         />
                         <ProjectComponent 
                             image="/safecycle_front.png"
-                            number="3."
                             title="SafeCycle App"
                             link="safecycle"
                         />

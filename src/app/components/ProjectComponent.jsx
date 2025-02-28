@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export default function ProjectComponent({title, image, number, link}) {
+export default function ProjectComponent({title, image, link}) {
     return(
         <>
         <div>
@@ -13,7 +13,7 @@ export default function ProjectComponent({title, image, number, link}) {
                         base: font-instrument  font-medium tracking-normal leading-6 text-neutral-800
                         sm: text-xl
                         md: md:text-3xl
-                        lg: lg:text-3xl">{number} {title}</p>
+                        lg: lg:text-3xl">{title}</p>
                     <Image
                         src={image}
                         alt="Project Image" 
