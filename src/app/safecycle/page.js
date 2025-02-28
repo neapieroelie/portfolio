@@ -268,7 +268,7 @@ export default function SafeCycle() {
                                         <li>Integrated Google Maps API for real-time navigation and cyclist tracking.</li>
                                     </ul>
                             </ol>
-                            <a  href="https://www.figma.com/design/h4Dn238BRq5EfY9PE55fLc/SafeCycle-App?node-id=4-42&t=10KQywqNpZTu4ULh-1"
+                            <a  href="https://www.figma.com/design/h4Dn238BRq5EfY9PE55fLc/SafeCycle-App?node-id=9-3057&t=JdRSeGk8ZMJU6pob-1"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

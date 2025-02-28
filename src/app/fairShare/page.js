@@ -289,6 +289,19 @@ export default function FairShare() {
                                         <li>Led usability testing, improving navigation, layout, and interactions.</li>
                                     </ul>
                             </ol>
+                            <a  href="https://www.figma.com/design/y4C2ZD7Y70MTeOxgAzHxPA/FairShare-App?node-id=1-53147&t=RMLD1TQhOv4KQErW-1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className="
+                                    base: font-plusJakartaSans text-blue-800 font-medium leading-normal tracking-tight hover:text-blue-400
+                                    sm: text-[12px]
+                                    md: md:text-[14px]
+                                    lg: lg:text-[16px]"
+                                >
+                                    Figma Link                   
+                                </p>
+                            </a>
                         </div>
                         <div 
                             ref={howRef} 
