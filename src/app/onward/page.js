@@ -135,12 +135,17 @@ export default function Onward() {
                                 md: md:h-[400px]
                                 lg: lg:h-dvh"
                         >
-                            <Image 
+                            <a  href="https://onward-prep.ca/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Image 
                                 src="/onwardLogo.png" 
                                 width={200} height={100} 
                                 alt="Onward Logo"
                                 className=""
                             />
+                            </a>
                             <h1 className="
                                 base: font-plusJakartaSans text-gray-700 font-bold leading-normal tracking-tight
                                 sm: text-[16px]
@@ -289,6 +294,19 @@ export default function Onward() {
                                         <li>Designed social media assets and a short promotional video to showcase Onward.</li>
                                     </ul>
                             </ol>
+                            <a  href="https://www.figma.com/design/dcKpbpNVJGf0k30txSGsvp/Onward-Web-App?node-id=1-5856&t=0xS8Y1AsrwLXmEQ1-1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className="
+                                    base: font-plusJakartaSans text-blue-800 font-medium leading-normal tracking-tight hover:text-blue-400
+                                    sm: text-[12px]
+                                    md: md:text-[14px]
+                                    lg: lg:text-[16px]"
+                                >
+                                    Figma Link                   
+                                </p>
+                            </a>
                         </div>
                         <div 
                             ref={howRef} 
@@ -351,6 +369,19 @@ export default function Onward() {
                                             the strong foundation, thoughtful UX design, and potential real-world impact.</li>
                                     </ul>
                             </ol>
+                            <a  href="https://onward-prep.ca/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className="
+                                    base: font-plusJakartaSans text-blue-800 font-medium leading-normal tracking-tight hover:text-blue-400
+                                    sm: text-[12px]
+                                    md: md:text-[14px]
+                                    lg: lg:text-[16px]"
+                                >
+                                    Onward Web App Demo                   
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>
