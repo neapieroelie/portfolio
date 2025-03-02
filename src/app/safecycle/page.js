@@ -306,7 +306,7 @@ export default function SafeCycle() {
                                 md: md:text-[14px]
                                 lg: lg:text-[16px]"
                             >
-                                <li>I got to learn how to adapt UI/UX designs to real-world development constraints and timelines..</li>
+                                <li>I got to learn how to adapt UI/UX designs to real-world development constraints and timelines.</li>
                                 <li>Gained hands-on experience in APIs, animations, and debugging complex issues.</li>
                                 <li>The final product was mostly static, as the API couldn’t fully support our intended features.</li>
                             </ol>
