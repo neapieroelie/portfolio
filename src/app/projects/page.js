@@ -65,6 +65,11 @@ export default function Projects() {
                             title="SafeCycle App"
                             link="safecycle"
                         />
+                        <ProjectComponent 
+                            image="/safecycle_front.png"
+                            title="Graphic Design"
+                            link="graphic-design"
+                        />
                     </div>
                 </div>
                 
