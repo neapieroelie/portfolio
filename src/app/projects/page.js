@@ -66,7 +66,7 @@ export default function Projects() {
                             link="safecycle"
                         />
                         <ProjectComponent 
-                            image="/safecycle_front.png"
+                            image="/tenaga_05.png"
                             title="Graphic Design"
                             link="graphic-design"
                         />

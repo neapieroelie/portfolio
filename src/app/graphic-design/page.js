@@ -9,14 +9,20 @@ const projects = [
   {
     id: "tennisBC",
     title: "Tennis BC",
-    description: "Designed logos, typography, and brand colors for multiple clients.",
+    description: "Shirt mockups for the Community Tennis League program by Tennis BC",
     images: ["/tennisbcmockup1.png", "/tennisbcmockup2.png", "/tennisbcmockup3.png", "/tennisbcmockup4.png"],
   },
   {
     id: "bakedByMartini",
     title: "Baked by Martini",
-    description: "Created posters and promotional materials for events and businesses.",
+    description: "PriceLists and promotional materials for Baked by Martini",
     images: ["/bakedbymartini1.png", "/bakedbymartini2.png", "/bakedbymartini3.png", "/bakedbymartini4.png", "/bakedbymartini5.png", "/bakedbymartini6.png", "/bakedbymartini7.png", "/bakedbymartini9.png", "/bakedbymartini8.png", ],
+  },
+  {
+    id: "tenaga",
+    title: "Tenaga",
+    description: "Beverage can mockups for a Project in BCIT.",
+    images: ["/Tenaga_04.jpg", "/Tenaga_01.png", "/Tenaga_02.png", "/Tenaga_03.png"],
   },
 ];
 
