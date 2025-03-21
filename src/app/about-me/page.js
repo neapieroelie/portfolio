@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Footer from "../components/Footer";
+import WalkingMonkey from "../components/WalkingMonkey";
 
 export default function AboutMe() {
     const [isFooterVisible, setIsFooterVisible] = useState(false);
@@ -40,8 +41,18 @@ export default function AboutMe() {
                 )}
 
                 {/* Main Content */}
-                <div className="w-full min-h-screen flex z-0 justify-center items-center snap-start">
-                    <div className="flex flex-row h-[600px] gap-[25px]">
+
+                {/* About Me */}
+                <div className="
+                    base:  w-full min-h-screen flex z-0 justify-center items-center snap-start
+                    sm:
+                    md:
+                    lg:">
+                    <div className="
+                        base: flex  h-[600px] gap-[25px]
+                        sm:flex-col
+                        md:flex-row
+                        lg:flex-row ">
                         <Image 
                             src="/portfolio_about_us.jpg" 
                             alt="Project Image" 
