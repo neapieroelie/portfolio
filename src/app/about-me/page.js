@@ -53,7 +53,7 @@ export default function AboutMe() {
                         md:flex-row
                         lg:flex-row ">
                         <Image 
-                            src="/portfolio_about_us.jpg" 
+                            src="/neamonkey.jpg" 
                             alt="Project Image" 
                             width={450} 
                             height={600} 
