@@ -40,18 +40,8 @@ export default function AboutMe() {
                 )}
 
                 {/* Main Content */}
-
-                {/* About Me */}
-                <div className="
-                    base:  w-full min-h-screen flex z-0 justify-center items-center snap-start
-                    sm:
-                    md:
-                    lg:">
-                    <div className="
-                        base: flex  h-[600px] gap-[25px]
-                        sm:flex-col
-                        md:flex-row
-                        lg:flex-row ">
+                <div className="w-full min-h-screen flex z-0 justify-center items-center snap-start">
+                    <div className="flex flex-row h-[600px] gap-[25px]">
                         <Image 
                             src="/neamonkey.jpg" 
                             alt="Project Image" 
