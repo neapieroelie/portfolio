@@ -43,7 +43,7 @@ export default function AboutMe() {
                 <div className="w-full min-h-screen flex z-0 justify-center items-center snap-start">
                     <div className="flex flex-row h-[600px] gap-[25px]">
                         <Image 
-                            src="/neamonkey.jpg" 
+                            src="/neamonkey.JPG" 
                             alt="Project Image" 
                             width={450} 
                             height={600} 
