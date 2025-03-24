@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Footer from "../components/Footer";
+import WalkingMonkey from "../components/WalkingMonkey";
 
 export default function AboutMe() {
     const [isFooterVisible, setIsFooterVisible] = useState(false);
