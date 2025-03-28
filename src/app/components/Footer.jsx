@@ -42,14 +42,14 @@ export default function Footer() {
             </div>
         </div>
         <a
-          href="mailto:nea@neakirana.com"
+          href="mailto:nea.pieroelie@gmail.com"
           className="
             base: font-robotoCondensed  tracking-tighter text-neutral-800 hover:underline transition duration-200
             sm: text-3xl
             md: md:text-4xl
             lg: lg:text-4xl 
         ">
-          NEA@NEAKIRANA.COM
+          NEA.PIEROELIE@GMAIL.COM
         </a>
       </div>
 
