@@ -30,7 +30,7 @@ export default function Projects() {
 
     return (
         <>
-            <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory">
+            <div className="w-full h-screen overflow-y-auto snap-y snap-mandatory sm:snap-y">
                 {/* Header */}
                 {!isFooterVisible && (
                     <div className="fixed top-0 right-0 z-10 w-full">
@@ -40,7 +40,7 @@ export default function Projects() {
                 {/* Main Content */}
                 <div className=" 
                   base: w-full flex z-0 justify-center items-center snap-start
-                  sm: h-full
+                  sm: h-auto
                   md: md:h-dvh 
                   lg: lg:h-dvh
                 ">
@@ -74,7 +74,7 @@ export default function Projects() {
                 </div>
                 
                 {/* Footer */}
-                <div ref={footerRef}>
+                <div ref={footerRef} className="snap-center">
                     <Footer snapAlign="snap-center" />
                 </div>
             </div>
