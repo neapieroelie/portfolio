@@ -40,7 +40,7 @@ export default function Projects() {
                 {/* Main Content */}
                 <div className=" 
                   base: w-full flex z-0 justify-center items-center snap-start
-                  sm: h-auto
+                  sm: h-full
                   md: md:h-dvh 
                   lg: lg:h-dvh
                 ">
