@@ -92,11 +92,14 @@ export default function GraphicDesignPage() {
 
           {/* Right Side - Project Content */}
           <div className="
-            base: w-3/4 ml-1/4 p-5 overflow-y-auto h-full
+            base: w-3/4 ml-1/4 p-5 overflow-y-auto h-full text-3xl pt-[12vh]
             sm: 
             md: 
             lg: ">
-            <h1 className="text-2xl font-bold mb-4">{selectedProject.title}</h1>
+            <h1 className=" font-instrument text-neutral-800 leading-6 font-medium tracking-normal
+              sm:
+              md:
+              lg: ">{selectedProject.title}</h1>
             <p className="mb-4">{selectedProject.description}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {selectedProject.images.map((src, index) => (

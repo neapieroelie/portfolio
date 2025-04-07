@@ -159,7 +159,7 @@ export default function Onward() {
                                 lg: lg:text-[16px]"
                             >
                                 We built Onward from the ground up to address the cultural and language barriers, biases against international 
-                                qualifications, and interview anxiety immigrant nurses face when transitioniing into North American job market. Research revealed:
+                                qualifications, and interview anxiety immigrant nurses face when transitioning into North American job market. Research revealed:
                             </p>
                             <ul className="
                                 base: font-plusJakartaSans text-gray-700 font-medium leading-normal tracking-tight list-disc list-outside pl-6
