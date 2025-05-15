@@ -74,7 +74,7 @@ export default function Home() {
 
         {/* Project Components */}
         <Project
-          image="/onward_front.png"
+          image="/powerlifting_front.png"
           title="HSG Powerlifting Club"
           description="Website design and development for the University of St. Gallen’s Powerlifting Club."
           snapAlign="snap-center"

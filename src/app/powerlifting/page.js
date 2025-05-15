@@ -20,10 +20,10 @@ export default function PowerLifting() {
     };
 
     const projectImages = [
-        "/onward_mockup_1.png",
-        "/onward_mockup_2.png",
-        "/onward_mockup_3.png",
-        "/onward_mockup_4.png",
+        "/powerlifting_mockup_4.png",
+        "/powerlifting_mockup_2.png",
+        "/powerlifting_mockup_3.png",
+        "/powerlifting_mockup_1.png",
     ];
 
     useEffect(() => {
