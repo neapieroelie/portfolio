@@ -75,6 +75,17 @@ export default function Home() {
         {/* Project Components */}
         <Project
           image="/onward_front.png"
+          title="HSG Powerlifting Club"
+          description="Website design and development for the University of St. Gallen’s Powerlifting Club."
+          snapAlign="snap-center"
+          text="text-right"
+          width={900}
+          height={100}
+          bouncingText="Next Project"
+          link="/powerlifting"
+        />
+        <Project
+          image="/onward_front.png"
           title="Onward"
           description="AI Powered Interview Coaching App."
           snapAlign="snap-center"
