@@ -51,6 +51,11 @@ export default function Projects() {
                       lg: lg:grid-cols-2 lg:gap-4 lg:pt-0
                     ">
                         <ProjectComponent 
+                            image="/powerlifting_front.png"
+                            title="HSG Powerlifting Club"
+                            link="/powerlifting"
+                        />
+                        <ProjectComponent 
                             image="/onward_front.png"
                             title="Onward Web App"
                             link="/onward"
@@ -64,11 +69,6 @@ export default function Projects() {
                             image="/safecycle_front.png"
                             title="SafeCycle App"
                             link="safecycle"
-                        />
-                        <ProjectComponent 
-                            image="/Tenaga_05.png"
-                            title="Graphic Design"
-                            link="graphic-design"
                         />
                     </div>
                 </div>
